@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostWork - Mis Postulaciones</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f6f9; margin: 0; padding: 0; color: #333;">
+
+    <!-- ========================================== -->
+    <!-- NAVEGACIÓN (Estilo unificado)              -->
+    <!-- ========================================== -->
+    <nav style="background-color: #1a1a1a; padding: 20px; text-align: center;">
+        <h2 style="color: white; margin-top: 0; display: inline-block; margin-right: 30px;">PostWork</h2>
+        <a href="inicio.html" style="color: white; text-decoration: none; margin: 0 15px;">Inicio</a>
+        <a href="buscar_empleo.html" style="color: white; text-decoration: none; margin: 0 15px;">Buscar Empleo</a>
+        <a href="blog.html" style="color: white; text-decoration: none; margin: 0 15px;">Blog / Recursos</a>
+        <a href="perfil_usuario.html" style="color: white; text-decoration: none; margin: 0 15px;">Mi Perfil</a>
+        <a href="postulaciones.html" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; border-bottom: 2px solid #4285f4; padding-bottom: 3px;">Postulaciones</a>
+        <a href="FAQ.html" style="color: white; text-decoration: none; margin: 0 15px;">FAQ</a>
+        <a href="#contacto" style="color: white; text-decoration: none; margin: 0 15px;">Contacto</a>
+    </nav>
+
+    <!-- ========================================== -->
+    <!-- CABECERA DE LA SECCIÓN                     -->
+    <!-- ========================================== -->
+    <header style="background: linear-gradient(135deg, #1a1a1a, #2d3748); color: white; padding: 35px; text-align: center;">
+        <h1 style="margin: 0 0 10px 0; font-size: 28px;">Mis postulaciones recientes</h1>
+        <p style="margin: 0; color: #cbd5e1; font-size: 15px;">Hacé un seguimiento del estado de tus procesos de selección activos y finalizados.</p>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- CONTENEDOR PRINCIPAL                       -->
+    <!-- ========================================== -->
+    <main style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+        
+        <!-- Filtros de estados -->
+        <nav style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 30px; justify-content: center;">
+            <button type="button" style="background-color: #2563eb; color: white; border: none; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-weight: bold; font-size: 14px;">Todas</button>
+            <button type="button" style="background-color: white; color: #475569; border: 1px solid #cbd5e1; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-size: 14px;">En revisión</button>
+            <button type="button" style="background-color: white; color: #475569; border: 1px solid #cbd5e1; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-size: 14px;">Entrevista</button>
+            <button type="button" style="background-color: white; color: #475569; border: 1px solid #cbd5e1; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-size: 14px;">Aceptadas</button>
+            <button type="button" style="background-color: white; color: #475569; border: 1px solid #cbd5e1; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-size: 14px;">Rechazadas</button>
+        </nav>
+
+        <!-- Historial cronológico -->
+        <section>
+            <h2 style="font-size: 20px; color: #1a1a1a; margin-bottom: 20px; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px;">Historial cronológico de postulaciones</h2>
+            
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 20px;">
+                
+                <!-- Ítem 1: En revisión -->
+                <li style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); padding: 20px; border: 1px solid #e2e8f0;">
+                    <article style="display: flex; align-items: flex-start; gap: 20px; flex-wrap: wrap; justify-content: space-between;">
+                        <div style="display: flex; gap: 15px; align-items: center;">
+                            <div style="width: 50px; height: 50px; background: #e2e8f0; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #475569;">TC</div>
+                            <div>
+                                <h3 style="margin: 0 0 5px 0; font-size: 18px; color: #1a1a1a;">Desarrollador Full Stack</h3>
+                                <p style="margin: 0 0 5px 0; color: #4285f4; font-weight: bold; font-size: 14px;">TechCorp</p>
+                                <p style="margin: 0; color: #64748b; font-size: 12px;">Postulado el <time datetime="2026-04-15">15 Abr 2026</time></p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px;">
+                            <span style="background-color: #fef3c7; color: #d97706; padding: 4px 10px; border-radius: 4px; font-size: 12px; font-weight: bold;">En revisión</span>
+                            <div style="display: flex; gap: 8px;">
+                                <button type="button" style="background-color: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: bold;">Ver oferta</button>
+                                <button type="button" style="background-color: #2563eb; color: white; border: none; padding: 6px 12px; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: bold;">Abrir chat</button>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+
+                <!-- Ítem 2: Entrevista -->
+                <li style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); padding: 20px; border: 1px solid #e2e8f0;">
+                    <article style="display: flex; align-items: flex-start; gap: 20px; flex-wrap: wrap; justify-content: space-between;">
+                        <div style="display: flex; gap: 15px; align-items: center;">
+                            <div style="width: 50px; height: 50px; background: #e2e8f0; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #475569;">CS</div>
+                            <div>
+                                <h3 style="margin: 0 0 5px 0; font-size: 18px; color: #1a1a1a;">Diseñador UX/UI</h3>
+                                <p style="margin: 0 0 5px 0; color: #4285f4; font-weight: bold; font-size: 14px;">CreativeStudio</p>
+                                <p style="margin: 0; color: #64748b; font-size: 12px;">Postulado el <time datetime="2026-04-12">12 Abr 2026</time></p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px;">
+                            <span style="background-color: #dbeafe; color: #1d4ed8; padding: 4px 10px; border-radius: 4px; font-size: 12px; font-weight: bold;">Entrevista</span>
+                            <div style="display: flex; gap: 8px;">
+                                <button type="button" style="background-color: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: bold;">Ver oferta</button>
+                                <button type="button" style="background-color: #2563eb; color: white; border: none; padding: 6px 12px; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: bold;">Abrir chat</button>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+
+                <!-- Ítem 3: Aceptada -->
+                <li style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); padding: 20px; border: 1px solid #e2e8f0;">
+                    <article style="display: flex; align-items: flex-start; gap: 20px; flex-wrap: wrap; justify-content: space-between;">
+                        <div style="display: flex; gap: 15px; align-items: center;">
+                            <div style="width: 50px; height: 50px; background: #e2e8f0; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #475569;">DC</div>
+                            <div>
+                                <h3 style="margin: 0 0 5px 0; font-size: 18px; color: #1a1a1a;">Analista de Datos</h3>
+                                <p style="margin: 0 0 5px 0; color: #4285f4; font-weight: bold; font-size: 14px;">DataCorp</p>
+                                <p style="margin: 0; color: #64748b; font-size: 12px;">Postulado el <time datetime="2026-04-10">10 Abr 2026</time></p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px;">
+                            <span style="background-color: #dcfce7; color: #15803d; padding: 4px 10px; border-radius: 4px; font-size: 12px; font-weight: bold;">Aceptada</span>
+                            <div style="display: flex; gap: 8px;">
+                                <button type="button" style="background-color: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: bold;">Ver oferta</button>
+                                <button type="button" style="background-color: #2563eb; color: white; border: none; padding: 6px 12px; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: bold;">Abrir chat</button>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+
+                <!-- Ítem 4: Rechazada -->
+                <li style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); padding: 20px; border: 1px solid #e2e8f0;">
+                    <article style="display: flex; align-items: flex-start; gap: 20px; flex-wrap: wrap; justify-content: space-between;">
+                        <div style="display: flex; gap: 15px; align-items: center;">
+                            <div style="width: 50px; height: 50px; background: #e2e8f0; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #475569;">SX</div>
+                            <div>
+                                <h3 style="margin: 0 0 5px 0; font-size: 18px; color: #1a1a1a;">Frontend Developer</h3>
+                                <p style="margin: 0 0 5px 0; color: #4285f4; font-weight: bold; font-size: 14px;">StartupXYZ</p>
+                                <p style="margin: 0; color: #64748b; font-size: 12px;">Postulado el <time datetime="2026-04-08">08 Abr 2026</time></p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px;">
+                            <span style="background-color: #fee2e2; color: #b91c1c; padding: 4px 10px; border-radius: 4px; font-size: 12px; font-weight: bold;">Rechazada</span>
+                            <div style="display: flex; gap: 8px;">
+                                <button type="button" style="background-color: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: bold;">Ver oferta</button>
+                                <button type="button" style="background-color: #2563eb; color: white; border: none; padding: 6px 12px; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: bold;">Abrir chat</button>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+
+            </ul>
+        </section>
+    </main>
+
+    <!-- ========================================== -->
+    <!-- PIE DE PÁGINA                              -->
+    <!-- ========================================== -->
+    <footer id="contacto" style="background-color: #1a1a1a; color: white; text-align: center; padding: 40px 20px; margin-top: 50px;">
+        <h2>Contacto y Soporte PostWork</h2>
+        <p>¿Tenés alguna consulta sobre tus postulaciones? Escribinos:</p>
+        
+        <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 10px;"><strong>Email:</strong> <a href="mailto:soporte@postwork.com" style="color: #4285f4;">soporte@postwork.com</a></li>
+            <li style="margin-bottom: 10px;"><strong>Teléfono:</strong> <a href="tel:+543871234567" style="color: #4285f4;">Llamar al +54 387 1234-5678</a></li>
+        </ul>
+        
+        <p style="color: #888; font-size: 14px; margin-top: 30px;">&copy; 2026 PostWork - Panel Integrado del Postulante.</p>
+    </footer>
+
+</body>
+</html>
