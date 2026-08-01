@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostWork - Gestionar Mis Ofertas</title>
+</head>
+<body>
+
+    <nav style="background-color: #2563eb; padding: 10px;">
+        <a href="#" style="color: white; font-weight: bold; text-decoration: none; margin-right: 20px;">PostWork</a>
+        <a href="#" style="color: white; text-decoration: none; margin-right: 15px;">Inicio</a>
+        <a href="#" style="color: white; text-decoration: none; margin-right: 15px;">Buscar Empleo</a>
+        <a href="#" style="color: white; text-decoration: none;">Mi Perfil</a>
+    </nav>
+
+    <header style="background-color: #2563eb; color: white; padding: 20px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h1>Gestionar mis ofertas</h1>
+            <button type="button">+ Crear nueva oferta</button>
+        </div>
+    </header>
+
+    <main>
+        <p>Administra los puestos vigentes, revisa borradores antiguos o analiza convocatorias finalizadas.</p>
+
+        <nav>
+            <button type="button"><strong>Activas</strong></button>
+            <button type="button">Borradores</button>
+            <button type="button">Cerradas</button>
+        </nav>
+
+        <br>
+
+        <section>
+            <h2>Listado de ofertas publicadas</h2>
+            <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; text-align: left;">
+                <thead>
+                    <tr>
+                        <th>Título del puesto</th>
+                        <th>Categoría</th>
+                        <th>Modalidad</th>
+                        <th>Postulantes</th>
+                        <th>Estado</th>
+                        <th>Fecha de publicación</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Desarrollador Full Stack</strong></td>
+                        <td>Tecnología</td>
+                        <td>Remoto</td>
+                        <td><a href="#">24</a></td>
+                        <td>Activa</td>
+                        <td><time datetime="2026-04-15">15 Abr 2026</time></td>
+                        <td>
+                            <button type="button" title="Ver">Ver</button>
+                            <button type="button" title="Editar">Editar</button>
+                            <button type="button" title="Eliminar">Borrar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Diseñador UX/UI</strong></td>
+                        <td>Diseño</td>
+                        <td>Híbrido</td>
+                        <td><a href="#">18</a></td>
+                        <td>Activa</td>
+                        <td><time datetime="2026-04-12">12 Abr 2026</time></td>
+                        <td>
+                            <button type="button" title="Ver">Ver</button>
+                            <button type="button" title="Editar">Editar</button>
+                            <button type="button" title="Eliminar">Borrar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Product Manager</strong></td>
+                        <td>Gestión</td>
+                        <td>Presencial</td>
+                        <td><a href="#">12</a></td>
+                        <td>Activa</td>
+                        <td><time datetime="2026-04-10">10 Abr 2026</time></td>
+                        <td>
+                            <button type="button" title="Ver">Ver</button>
+                            <button type="button" title="Editar">Editar</button>
+                            <button type="button" title="Eliminar">Borrar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <br>
+
+        <section>
+            <h2>Resumen de actividad del servidor</h2>
+            <pre>
+Última sincronización: 2026-06-21 21:15:00
+Estado del servicio:  Óptimo
+Postulaciones hoy:    +45 nuevas
+            </pre>
+        </section>
+    </main>
+
+    <hr>
+    <footer>
+        <p>&copy; 2026 PostWork - Panel Corporativo Empresarial.</p>
+    </footer>
+
+</body>
+</html>

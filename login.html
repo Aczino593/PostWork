@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostWork - Iniciar Sesión</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f6f9; margin: 0; padding: 0; color: #333;">
+
+    <!-- ========================================== -->
+    <!-- NAVEGACIÓN PÚBLICA                         -->
+    <!-- ========================================== -->
+    <nav style="background-color: #1a1a1a; padding: 20px; text-align: center;">
+        <h2 style="color: white; margin-top: 0; display: inline-block; margin-right: 30px;">PostWork</h2>
+        <a href="inicio.html" style="color: white; text-decoration: none; margin: 0 15px;">Inicio</a>
+        <a href="blog.html" style="color: white; text-decoration: none; margin: 0 15px;">Blog / Recursos</a>
+        <a href="FAQ.html" style="color: white; text-decoration: none; margin: 0 15px;">FAQ</a>
+        <a href="#contacto" style="color: white; text-decoration: none; margin: 0 15px;">Contacto</a>
+        
+        <div style="display: inline-block; margin-left: 25px;">
+            <a href="login.html" style="color: white; text-decoration: none; margin-right: 10px; border: 1px solid #2563eb; background-color: #2563eb; padding: 6px 12px; border-radius: 4px; font-size: 13px; font-weight: bold;">Iniciar Sesión</a>
+            <a href="registro.html" style="color: #cbd5e1; text-decoration: none; background-color: transparent; border: 1px solid #475569; padding: 7px 14px; border-radius: 4px; font-size: 13px;">Registrarse</a>
+        </div>
+    </nav>
+
+    <!-- ========================================== -->
+    <!-- CONTENEDOR PRINCIPAL: FORMULARIO LOGIN     -->
+    <!-- ========================================== -->
+    <main style="max-width: 420px; margin: 60px auto; padding: 0 20px;">
+        <div style="background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
+            
+            <header style="text-align: center; margin-bottom: 30px;">
+                <h1 style="font-size: 24px; color: #1a1a1a; margin-top: 0; margin-bottom: 8px;">¡Bienvenido de vuelta!</h1>
+                <p style="color: #64748b; font-size: 14px; margin: 0;">Ingresá tus datos para acceder a tu cuenta en PostWork.</p>
+            </header>
+
+            <form action="perfil_usuario.html" method="POST">
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 6px; font-weight: bold; color: #333; font-size: 14px;">Correo electrónico:</label>
+                    <input type="email" placeholder="tu_correo@ejemplo.com" style="width: 100%; padding: 11px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box; font-size: 14px;" required>
+                </div>
+
+                <div style="margin-bottom: 25px;">
+                    <label style="display: block; margin-bottom: 6px; font-weight: bold; color: #333; font-size: 14px;">Contraseña:</label>
+                    <input type="password" placeholder="••••••••" style="width: 100%; padding: 11px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box; font-size: 14px;" required>
+                </div>
+
+                <button type="submit" style="width: 100%; background-color: #2563eb; color: white; border: none; border-radius: 4px; padding: 12px; font-size: 15px; cursor: pointer; font-weight: bold; margin-bottom: 20px;">Iniciar Sesión</button>
+            </form>
+
+            <div style="text-align: center; font-size: 14px; color: #64748b; border-top: 1px solid #f1f3f5; padding-top: 20px;">
+                ¿No tenés una cuenta todavía? <a href="registro.html" style="color: #2563eb; text-decoration: none; font-weight: bold;">Registrate acá</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ========================================== -->
+    <!-- PIE DE PÁGINA                              -->
+    <!-- ========================================== -->
+    <footer id="contacto" style="background-color: #1a1a1a; color: white; text-align: center; padding: 40px 20px; margin-top: 60px; font-size: 13px;">
+        <h3 style="margin-top: 0; font-size: 16px; color: #f8fafc; margin-bottom: 8px;">Contacto y Soporte PostWork</h3>
+        <p style="color: #94a3b8; font-size: 13px; margin-bottom: 20px;">¿Tenés problemas para ingresar? Comunicate con nosotros:</p>
+        <p style="margin: 6px 0; color: #cbd5e1;">Email: <a href="mailto:soporte@postwork.com" style="color: #60a5fa; text-decoration: none;">soporte@postwork.com</a></p>
+        <p style="margin: 6px 0; color: #cbd5e1;">Teléfono: <a href="tel:+543871234567" style="color: #60a5fa; text-decoration: none;">Llamar al +54 387 1234-5678</a></p>
+        <p style="margin-top: 25px; color: #64748b; font-size: 12px;">&copy; 2026 PostWork - Plataforma de Empleo IT.</p>
+    </footer>
+
+</body>
+</html>
