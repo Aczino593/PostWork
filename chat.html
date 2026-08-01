@@ -7,12 +7,10 @@
 </head>
 <body style="font-family: Arial, sans-serif; background-color: #f4f6f9; margin: 0; padding: 0; color: #333;">
 
-    <!-- ========================================== -->
-    <!-- NAVEGACIÓN (Estilo unificado)              -->
-    <!-- ========================================== -->
+    <!-- Navegación -->
     <nav style="background-color: #1a1a1a; padding: 20px; text-align: center;">
         <h2 style="color: white; margin-top: 0; display: inline-block; margin-right: 30px;">PostWork</h2>
-        <a href="inicio.html" style="color: white; text-decoration: none; margin: 0 15px;">Inicio</a>
+        <a href="index.html" style="color: white; text-decoration: none; margin: 0 15px;">Inicio</a>
         <a href="buscar_empleo.html" style="color: white; text-decoration: none; margin: 0 15px;">Buscar Empleo</a>
         <a href="blog.html" style="color: white; text-decoration: none; margin: 0 15px;">Blog / Recursos</a>
         <a href="perfil_usuario.html" style="color: white; text-decoration: none; margin: 0 15px;">Mi Perfil</a>
@@ -22,19 +20,15 @@
         <a href="#contacto" style="color: white; text-decoration: none; margin: 0 15px;">Contacto</a>
     </nav>
 
-    <!-- ========================================== -->
-    <!-- CABECERA OCULTA (Accesibilidad)            -->
-    <!-- ========================================== -->
+    <!-- Cabecera oculta (accesibilidad) -->
     <header>
         <h1 style="display: none;">Panel de Mensajería y Chats</h1>
     </header>
 
-    <!-- ========================================== -->
-    <!-- CONTENEDOR PRINCIPAL (Ancho 1200px)        -->
-    <!-- ========================================== -->
+    <!-- Contenedor principal (ancho 1200px) -->
     <main style="max-width: 1200px; margin: 30px auto; padding: 0 25px; height: 75vh; display: flex; gap: 20px;">
         
-        <!-- PANEL IZQUIERDO: Conversaciones activas -->
+        <!-- Panel izquierdo: conversaciones activas -->
         <aside style="width: 30%; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; display: flex; flex-direction: column;">
             <div style="padding: 20px; border-bottom: 1px solid #e2e8f0;">
                 <h2 style="margin: 0; font-size: 18px; color: #1a1a1a;">Conversaciones activas</h2>
@@ -42,7 +36,7 @@
             </div>
             
             <ul style="list-style: none; padding: 0; margin: 0; overflow-y: auto; flex-grow: 1;">
-                <!-- Chat 1 (Activo) -->
+                <!-- Chat 1 (activo) -->
                 <li style="padding: 15px 20px; border-bottom: 1px solid #f1f3f5; background-color: #f8fafc; cursor: pointer; border-left: 4px solid #2563eb;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
                         <strong style="color: #1a1a1a; font-size: 15px;">TechCorp</strong>
@@ -72,7 +66,7 @@
             </ul>
         </aside>
 
-        <!-- PANEL DERECHO: Sala de chat -->
+        <!-- Panel derecho: sala de chat -->
         <section style="width: 70%; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; display: flex; flex-direction: column;">
             
             <!-- Cabecera de sala -->
@@ -87,7 +81,7 @@
             <!-- Historial de mensajes -->
             <div role="log" aria-label="Historial de mensajes" style="flex-grow: 1; padding: 25px; overflow-y: auto; background-color: #ffffff; display: flex; flex-direction: column; gap: 15px;">
                 
-                <!-- Mensaje Empresa 1 (Contraste mejorado con #e2e8f0) -->
+                <!-- Mensaje empresa 1 -->
                 <div style="align-self: flex-start; max-width: 75%;">
                     <p style="margin: 0 0 4px 0;"><small style="color: #475569; font-weight: bold;">TechCorp - 10:15</small></p>
                     <div style="background-color: #e2e8f0; color: #1e293b; padding: 12px 16px; border-radius: 12px 12px 12px 0; font-size: 14px; line-height: 1.4; border: 1px solid #cbd5e1;">
@@ -95,7 +89,7 @@
                     </div>
                 </div>
                 
-                <!-- Mensaje Empresa 2 -->
+                <!-- Mensaje empresa 2 -->
                 <div style="align-self: flex-start; max-width: 75%;">
                     <p style="margin: 0 0 4px 0;"><small style="color: #475569; font-weight: bold;">TechCorp - 10:16</small></p>
                     <div style="background-color: #e2e8f0; color: #1e293b; padding: 12px 16px; border-radius: 12px 12px 12px 0; font-size: 14px; line-height: 1.4; border: 1px solid #cbd5e1;">
@@ -103,7 +97,7 @@
                     </div>
                 </div>
 
-                <!-- Mensaje Usuario 1 -->
+                <!-- Mensaje usuario 1 -->
                 <div style="align-self: flex-end; max-width: 75%;">
                     <p style="margin: 0 0 4px 0; text-align: right;"><small style="color: #475569; font-weight: bold;">Tú - 10:20</small></p>
                     <div style="background-color: #2563eb; color: white; padding: 12px 16px; border-radius: 12px 12px 0 12px; font-size: 14px; line-height: 1.4;">
@@ -111,7 +105,7 @@
                     </div>
                 </div>
 
-                <!-- Mensaje Usuario 2 (CV Adjunto) -->
+                <!-- Mensaje usuario 2 -->
                 <div style="align-self: flex-end; max-width: 75%;">
                     <p style="margin: 0 0 4px 0; text-align: right;"><small style="color: #475569; font-weight: bold;">Tú - 10:21</small></p>
                     <div style="background-color: #2563eb; color: white; padding: 12px 16px; border-radius: 12px 12px 0 12px; font-size: 14px; line-height: 1.4;">
@@ -133,12 +127,13 @@
         </section>
     </main>
 
-    <!-- ========================================== -->
-    <!-- PIE DE PÁGINA                              -->
-    <!-- ========================================== -->
+    <!-- Pie de página -->
     <footer style="text-align: center; padding: 30px; color: #64748b; font-size: 13px; margin-top: 40px; border-top: 1px solid #e2e8f0;">
         <p>&copy; 2026 PostWork - Sistema de Mensajería Seguro.</p>
     </footer>
 
 </body>
 </html>
+
+
+
