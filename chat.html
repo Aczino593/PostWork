@@ -32,7 +32,10 @@
         <aside style="width: 30%; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; display: flex; flex-direction: column;">
             <div style="padding: 20px; border-bottom: 1px solid #e2e8f0;">
                 <h2 style="margin: 0; font-size: 18px; color: #1a1a1a;">Conversaciones activas</h2>
-                <input type="search" placeholder="Buscar conversación..." style="width: 100%; box-sizing: border-box; margin-top: 15px; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 14px;">
+                <form action="chat.html" method="GET" style="margin-top: 15px;">
+                    <label for="buscar-conversacion" style="display: none;">Buscar conversación</label>
+                    <input type="search" id="buscar-conversacion" name="buscar_conversacion" maxlength="80" placeholder="Buscar conversación..." style="width: 100%; box-sizing: border-box; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 14px;">
+                </form>
             </div>
             
             <ul style="list-style: none; padding: 0; margin: 0; overflow-y: auto; flex-grow: 1;">
@@ -117,9 +120,10 @@
 
             <!-- Formulario de envío -->
             <footer style="padding: 15px 20px; border-top: 1px solid #e2e8f0; background-color: #f8fafc; border-radius: 0 0 8px 8px;">
-                <form action="#" method="POST" style="display: flex; gap: 10px; align-items: center;">
+                <form action="chat.html" method="POST" style="display: flex; gap: 10px; align-items: center;">
                     <button type="button" title="Adjuntar archivo" style="background: none; border: none; font-size: 20px; cursor: pointer; color: #64748b;">📎</button>
-                    <input type="text" placeholder="Escribí un mensaje..." style="flex-grow: 1; padding: 10px 15px; border: 1px solid #cbd5e1; border-radius: 20px; font-size: 14px; outline: none;" required>
+                    <label for="mensaje-chat" style="display: none;">Mensaje</label>
+                    <input type="text" id="mensaje-chat" name="mensaje" maxlength="500" placeholder="Escribí un mensaje..." style="flex-grow: 1; padding: 10px 15px; border: 1px solid #cbd5e1; border-radius: 20px; font-size: 14px; outline: none;" required>
                     <button type="submit" style="background-color: #2563eb; color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; font-weight: bold; font-size: 14px;">Enviar</button>
                 </form>
             </footer>

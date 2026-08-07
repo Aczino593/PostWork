@@ -33,10 +33,13 @@
                         <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
                     </svg>
                 </div>
-                <label for="subir-foto" style="background-color: #4285f4; color: white; padding: 6px 12px; font-size: 12px; border-radius: 4px; cursor: pointer; display: inline-block; font-weight: bold;">
-                    Cambiar Foto
-                </label>
-                <input type="file" id="subir-foto" style="display: none;" accept="image/*">
+                <form action="perfil_usuario.html" method="POST" enctype="multipart/form-data" style="display: inline-block;">
+                    <label for="subir-foto" style="background-color: #4285f4; color: white; padding: 6px 12px; font-size: 12px; border-radius: 4px; cursor: pointer; display: inline-block; font-weight: bold;">
+                        Cambiar Foto
+                    </label>
+                    <input type="file" id="subir-foto" name="foto_perfil" style="display: none;" accept="image/*" required>
+                    <button type="submit" style="margin-left: 8px; background-color: #10b981; color: white; border: none; padding: 6px 10px; border-radius: 4px; font-size: 12px; cursor: pointer;">Subir</button>
+                </form>
             </div>
 
             <!-- Información principal -->
@@ -116,10 +119,13 @@
                             <button type="button" style="background-color: #ef4444; color: white; border: none; padding: 6px 12px; border-radius: 4px; font-size: 12px; cursor: pointer;">Eliminar</button>
                         </div>
                     </div>
-                    <label for="subir-cv" style="background-color: #10b981; color: white; padding: 8px 16px; border-radius: 4px; font-size: 14px; cursor: pointer; display: inline-block; font-weight: bold; text-align: center;">
-                        + Subir nuevo CV en PDF
-                    </label>
-                    <input type="file" id="subir-cv" style="display: none;" accept=".pdf">
+                    <form action="perfil_usuario.html" method="POST" enctype="multipart/form-data" style="display: inline-block;">
+                        <label for="subir-cv" style="background-color: #10b981; color: white; padding: 8px 16px; border-radius: 4px; font-size: 14px; cursor: pointer; display: inline-block; font-weight: bold; text-align: center;">
+                            + Subir nuevo CV en PDF
+                        </label>
+                        <input type="file" id="subir-cv" name="cv_usuario" style="display: none;" accept=".pdf" required>
+                        <button type="submit" style="margin-left: 8px; background-color: #2563eb; color: white; border: none; padding: 8px 12px; border-radius: 4px; font-size: 14px; cursor: pointer;">Subir CV</button>
+                    </form>
                 </article>
 
                 <!-- Portafolio y Links -->

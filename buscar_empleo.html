@@ -32,31 +32,35 @@
         <section style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 30px; border: 1px solid #e2e8f0;">
             <h2 style="font-size: 18px; color: #1a1a1a; margin-top: 0; margin-bottom: 20px;">Herramientas de búsqueda</h2>
             
-            <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
-                <input type="text" placeholder="Puesto, tecnología o empresa (Ej. React)..." style="flex: 2; min-width: 280px; padding: 12px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 14px;">
-                <input type="text" placeholder="Ubicación (ej: Remoto, Buenos Aires)..." style="flex: 1; min-width: 220px; padding: 12px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 14px;">
-                <button type="button" style="background-color: #2563eb; color: white; border: none; padding: 12px 25px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 14px;">Buscar</button>
-            </div>
+            <form action="buscar_empleo.html" method="GET">
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
+                    <label for="puesto" style="display: none;">Puesto</label>
+                    <input type="text" id="puesto" name="puesto" placeholder="Puesto, tecnología o empresa (Ej. React)..." maxlength="80" style="flex: 2; min-width: 280px; padding: 12px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 14px;">
+                    <label for="ubicacion" style="display: none;">Ubicación</label>
+                    <input type="text" id="ubicacion" name="ubicacion" placeholder="Ubicación (ej: Remoto, Buenos Aires)..." maxlength="80" style="flex: 1; min-width: 220px; padding: 12px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 14px;">
+                    <button type="submit" style="background-color: #2563eb; color: white; border: none; padding: 12px 25px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 14px;">Buscar</button>
+                </div>
 
-            <div style="border-top: 1px solid #f1f3f5; padding-top: 20px; display: flex; gap: 40px; flex-wrap: wrap; font-size: 14px; color: #475569;">
-                <div>
-                    <strong style="color: #1a1a1a; display: block; margin-bottom: 8px;">Jornada laboral</strong>
-                    <label style="display: block; margin-bottom: 5px;"><input type="checkbox"> Tiempo completo</label>
-                    <label style="display: block;"><input type="checkbox"> Medio tiempo</label>
+                <div style="border-top: 1px solid #f1f3f5; padding-top: 20px; display: flex; gap: 40px; flex-wrap: wrap; font-size: 14px; color: #475569;">
+                    <div>
+                        <strong style="color: #1a1a1a; display: block; margin-bottom: 8px;">Jornada laboral</strong>
+                        <label style="display: block; margin-bottom: 5px;"><input type="checkbox" id="jornada-completa" name="jornada" value="tiempo-completo"> Tiempo completo</label>
+                        <label style="display: block;"><input type="checkbox" id="jornada-parcial" name="jornada" value="medio-tiempo"> Medio tiempo</label>
+                    </div>
+                    <div>
+                        <strong style="color: #1a1a1a; display: block; margin-bottom: 8px;">Modalidad de trabajo</strong>
+                        <label style="display: block; margin-bottom: 5px;"><input type="checkbox" id="modalidad-remoto" name="modalidad" value="remoto"> Remoto</label>
+                        <label style="display: block; margin-bottom: 5px;"><input type="checkbox" id="modalidad-hibrido" name="modalidad" value="hibrido"> Híbrido</label>
+                        <label style="display: block;"><input type="checkbox" id="modalidad-presencial" name="modalidad" value="presencial"> Presencial</label>
+                    </div>
+                    <div>
+                        <strong style="color: #1a1a1a; display: block; margin-bottom: 8px;">Experiencia requerida</strong>
+                        <label style="display: block; margin-bottom: 5px;"><input type="radio" id="exp-trainee" name="experiencia" value="trainee" checked> Trainee / Junior</label>
+                        <label style="display: block; margin-bottom: 5px;"><input type="radio" id="exp-semi" name="experiencia" value="semi-senior"> Semi-Senior</label>
+                        <label style="display: block;"><input type="radio" id="exp-senior" name="experiencia" value="senior"> Senior</label>
+                    </div>
                 </div>
-                <div>
-                    <strong style="color: #1a1a1a; display: block; margin-bottom: 8px;">Modalidad de trabajo</strong>
-                    <label style="display: block; margin-bottom: 5px;"><input type="checkbox"> Remoto</label>
-                    <label style="display: block; margin-bottom: 5px;"><input type="checkbox"> Híbrido</label>
-                    <label style="display: block;"><input type="checkbox"> Presencial</label>
-                </div>
-                <div>
-                    <strong style="color: #1a1a1a; display: block; margin-bottom: 8px;">Experiencia requerida</strong>
-                    <label style="display: block; margin-bottom: 5px;"><input type="radio" name="exp"> Trainee / Junior</label>
-                    <label style="display: block; margin-bottom: 5px;"><input type="radio" name="exp"> Semi-Senior</label>
-                    <label style="display: block;"><input type="radio" name="exp"> Senior</label>
-                </div>
-            </div>
+            </form>
         </section>
 
         <!-- Resultados de búsqueda -->

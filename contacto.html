@@ -41,20 +41,21 @@
         <section style="width: 60%;">
             <h2>Envianos un mensaje directo</h2>
             
-            <form action="#" method="POST">
+            <form action="contacto.html" method="POST">
                 <p>
                     <label for="nombre">Nombre</label><br>
-                    <input type="text" id="nombre" placeholder="Tu nombre completo" required style="width: 100%;">
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" maxlength="80" required style="width: 100%;">
                 </p>
 
                 <p>
                     <label for="email">Email</label><br>
-                    <input type="email" id="email" placeholder="tu@email.com" required style="width: 100%;">
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" maxlength="100" required style="width: 100%;">
                 </p>
 
                 <p>
                     <label for="asunto">Asunto</label><br>
-                    <select id="asunto" style="width: 100%;">
+                    <select id="asunto" name="asunto" required style="width: 100%;">
+                        <option value="">Seleccionar...</option>
                         <option value="general">Consulta general</option>
                         <option value="soporte">Soporte técnico</option>
                         <option value="comercial">Comercial / Empresas</option>
@@ -63,7 +64,7 @@
 
                 <p>
                     <label for="mensaje">Mensaje</label><br>
-                    <textarea id="mensaje" rows="6" placeholder="Escribí tu consulta aquí..." required style="width: 100%;"></textarea>
+                    <textarea id="mensaje" name="mensaje" rows="6" maxlength="500" placeholder="Escribí tu consulta aquí..." required style="width: 100%;"></textarea>
                 </p>
 
                 <button type="submit" style="background-color: #2563eb; color: white; border: none; padding: 10px 20px; width: 100%;">Enviar mensaje</button>

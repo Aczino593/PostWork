@@ -27,36 +27,39 @@
         <section>
             <h2>Especificaciones de la vacante</h2>
             
-            <form action="#" method="POST">
+            <form action="publicar_trabajo.html" method="POST">
                 <p>
                     <label for="titulo"><strong>Título del puesto</strong></label><br>
-                    <input type="text" id="titulo" placeholder="Ej: Desarrollador Full Stack" required style="width: 300px;">
+                    <input type="text" id="titulo" name="titulo" placeholder="Ej: Desarrollador Full Stack" maxlength="100" required style="width: 300px;">
                 </p>
 
                 <p>
                     <label for="categoria"><strong>Categoría / Industria</strong></label><br>
-                    <select id="categoria" required>
+                    <select id="categoria" name="categoria" required>
                         <option value="">Seleccionar categoría...</option>
                         <option value="tecnologia">Tecnología</option>
                         <option value="diseno">Diseño</option>
                         <option value="salud">Salud</option>
                         <option value="educacion">Educación</option>
-                        <option value="administraron">Administración</option>
+                        <option value="administracion">Administración</option>
                     </select>
                 </p>
 
                 <fieldset>
                     <legend><strong>Modalidad de la jornada</strong></legend>
-                    <label><input type="radio" name="modalidad" value="presencial"> Presencial</label>
-                    <label><input type="radio" name="modalidad" value="remoto" checked> Remoto</label>
-                    <label><input type="radio" name="modalidad" value="hibrido"> Híbrido</label>
+                    <label for="modalidad-presencial"><input type="radio" id="modalidad-presencial" name="modalidad" value="presencial"> Presencial</label>
+                    <label for="modalidad-remoto"><input type="radio" id="modalidad-remoto" name="modalidad" value="remoto" checked> Remoto</label>
+                    <label for="modalidad-hibrido"><input type="radio" id="modalidad-hibrido" name="modalidad" value="hibrido"> Híbrido</label>
                 </fieldset>
 
                 <p>
                     <strong>Salario estimado mensual</strong><br>
-                    <input type="number" placeholder="Desde" aria-label="Salario desde">
-                    <input type="number" placeholder="Hasta" aria-label="Salario hasta">
-                    <select aria-label="Moneda de pago">
+                    <label for="salario-desde" style="display: none;">Salario desde</label>
+                    <input type="number" id="salario-desde" name="salario_desde" min="0" placeholder="Desde" aria-label="Salario desde">
+                    <label for="salario-hasta" style="display: none;">Salario hasta</label>
+                    <input type="number" id="salario-hasta" name="salario_hasta" min="0" placeholder="Hasta" aria-label="Salario hasta">
+                    <label for="moneda" style="display: none;">Moneda</label>
+                    <select id="moneda" name="moneda" aria-label="Moneda de pago">
                         <option value="ARS">ARS</option>
                         <option value="USD">USD</option>
                     </select>
@@ -64,7 +67,7 @@
 
                 <p>
                     <label for="jornada"><strong>Carga horaria</strong></label><br>
-                    <select id="jornada">
+                    <select id="jornada" name="jornada" required>
                         <option value="full-time">Full-time</option>
                         <option value="part-time">Part-time</option>
                     </select>
@@ -72,7 +75,7 @@
 
                 <p>
                     <label for="experiencia"><strong>Experiencia requerida</strong></label><br>
-                    <select id="experiencia">
+                    <select id="experiencia" name="experiencia" required>
                         <option value="sin-experiencia">Sin experiencia previa</option>
                         <option value="1-2">1-2 años de trayectoria</option>
                         <option value="3-5">3-5 años de trayectoria</option>
@@ -82,26 +85,26 @@
 
                 <p>
                     <label for="descripcion"><strong>Descripción de tareas</strong></label><br>
-                    <textarea id="descripcion" rows="4" cols="50" placeholder="Describe las responsabilidades y objetivos del puesto..."></textarea>
+                    <textarea id="descripcion" name="descripcion" rows="4" cols="50" maxlength="1000" placeholder="Describe las responsabilidades y objetivos del puesto..."></textarea>
                 </p>
 
                 <p>
                     <label for="requisitos"><strong>Requisitos excluyentes</strong></label><br>
-                    <textarea id="requisitos" rows="4" cols="50" placeholder="Lista los requisitos necesarios para el puesto..."></textarea>
+                    <textarea id="requisitos" name="requisitos" rows="4" cols="50" maxlength="1000" placeholder="Lista los requisitos necesarios para el puesto..."></textarea>
                 </p>
 
                 <p>
                     <label for="beneficios"><strong>Beneficios del puesto</strong></label><br>
-                    <textarea id="beneficios" rows="4" cols="50" placeholder="Describe los beneficios que ofrece la empresa..."></textarea>
+                    <textarea id="beneficios" name="beneficios" rows="4" cols="50" maxlength="1000" placeholder="Describe los beneficios que ofrece la empresa..."></textarea>
                 </p>
 
                 <p>
                     <label for="fecha-limite"><strong>Fecha límite de postulación</strong></label><br>
-                    <input type="date" id="fecha-limite">
+                    <input type="date" id="fecha-limite" name="fecha_limite" required>
                 </p>
 
                 <p>
-                    <button type="button">Guardar borrador</button>
+                    <button type="reset">Guardar borrador</button>
                     <button type="submit" style="background-color: #2563eb; color: white; border: none; padding: 5px 10px;">Publicar oferta de inmediato</button>
                 </p>
 
