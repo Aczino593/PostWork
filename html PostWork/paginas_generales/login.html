@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostWork - Iniciar Sesión</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <nav class="main-nav">
+        <h2>PostWork</h2>
+        <a href="index.html">Inicio</a>
+        <a href="blog.html">Blog / Recursos</a>
+        <a href="FAQ.html">FAQ</a>
+        <div class="nav-links">
+            <a href="login.html" class="btn-nav-primary">Iniciar Sesión</a>
+            <a href="registro.html" class="btn-nav-secondary">Registrarse</a>
+        </div>
+    </nav>
+
+    <main class="container-form">
+        <div class="card">
+            <header class="text-center margin-bottom-medium">
+                <h1 class="section-header">Iniciar Sesión</h1>
+                <p class="text-muted">Ingrese sus credenciales de acceso</p>
+            </header>
+
+            <form action="/login.php" method="POST">
+                <div class="form-group">
+                    <label for="email" class="form-label">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="tu_correo@ejemplo.com" autocomplete="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">Contraseña:</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="••••••••" autocomplete="current-password" required>
+                </div>
+
+                <button type="submit" class="btn-primary block" style="width: 100%;">Ingresar</button>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

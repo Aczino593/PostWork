@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostWork - Mis Postulaciones</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+
+    <nav class="main-nav">
+        <h2>PostWork</h2>
+        <a href="index.html">Inicio</a>
+        <a href="buscar_empleo.html">Buscar Empleo</a>
+        <a href="blog.html">Blog / Recursos</a>
+        <a href="perfil_usuario.html">Mi Perfil</a>
+        <a href="postulaciones.html" class="active">Postulaciones</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <header class="hero-header-dark">
+        <h1>Mis postulaciones recientes</h1>
+        <p class="hero-subtext">Hacé un seguimiento del estado de tus procesos de selección activos y finalizados.</p>
+    </header>
+
+    <main class="container-wide margin-top-large" style="flex: 1;">
+        
+        <div class="flex flex-gap-small margin-bottom-medium flex-wrap">
+            <button type="button" class="btn-filter active">Todas</button>
+            <button type="button" class="btn-filter">En revisión</button>
+            <button type="button" class="btn-filter">Entrevista</button>
+            <button type="button" class="btn-filter">Aceptadas</button>
+            <button type="button" class="btn-filter">Rechazadas</button>
+        </div>
+
+        <section class="card margin-bottom-large">
+            <h2 class="section-header">Historial cronológico de postulaciones</h2>
+            
+            <div class="flex flex-column flex-gap-medium">
+                
+                <article class="job-card">
+                    <div class="flex flex-gap-medium align-center flex-wrap">
+                        <div class="badge badge-info" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: bold;">TC</div>
+                        <div>
+                            <h3 class="job-card-title">Desarrollador Full Stack</h3>
+                            <p class="job-card-company">TechCorp</p>
+                            <p class="text-muted" style="font-size: 0.85rem;">Postulado el <time datetime="2026-04-15">15 Abr 2026</time></p>
+                        </div>
+                    </div>
+                    
+                    <div class="job-card-actions flex-column align-end">
+                        <span class="badge badge-warning">En revisión</span>
+                        <div class="flex flex-gap-small margin-top-small">
+                            <button type="button" class="btn-secondary">Ver oferta</button>
+                            <button type="button" class="btn-primary">Abrir chat</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="job-card">
+                    <div class="flex flex-gap-medium align-center flex-wrap">
+                        <div class="badge badge-info" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: bold;">CS</div>
+                        <div>
+                            <h3 class="job-card-title">Diseñador UX/UI</h3>
+                            <p class="job-card-company">CreativeStudio</p>
+                            <p class="text-muted" style="font-size: 0.85rem;">Postulado el <time datetime="2026-04-12">12 Abr 2026</time></p>
+                        </div>
+                    </div>
+                    
+                    <div class="job-card-actions flex-column align-end">
+                        <span class="badge badge-info">Entrevista</span>
+                        <div class="flex flex-gap-small margin-top-small">
+                            <button type="button" class="btn-secondary">Ver oferta</button>
+                            <button type="button" class="btn-primary">Abrir chat</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="job-card">
+                    <div class="flex flex-gap-medium align-center flex-wrap">
+                        <div class="badge badge-info" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: bold;">DC</div>
+                        <div>
+                            <h3 class="job-card-title">Analista de Datos</h3>
+                            <p class="job-card-company">DataCorp</p>
+                            <p class="text-muted" style="font-size: 0.85rem;">Postulado el <time datetime="2026-04-10">10 Abr 2026</time></p>
+                        </div>
+                    </div>
+                    
+                    <div class="job-card-actions flex-column align-end">
+                        <span class="badge badge-success">Aceptada</span>
+                        <div class="flex flex-gap-small margin-top-small">
+                            <button type="button" class="btn-secondary">Ver oferta</button>
+                            <button type="button" class="btn-primary">Abrir chat</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="job-card">
+                    <div class="flex flex-gap-medium align-center flex-wrap">
+                        <div class="badge badge-info" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: bold;">SX</div>
+                        <div>
+                            <h3 class="job-card-title">Frontend Developer</h3>
+                            <p class="job-card-company">StartupXYZ</p>
+                            <p class="text-muted" style="font-size: 0.85rem;">Postulado el <time datetime="2026-04-08">08 Abr 2026</time></p>
+                        </div>
+                    </div>
+                    
+                    <div class="job-card-actions flex-column align-end">
+                        <span class="badge badge-danger">Rechazada</span>
+                        <div class="flex flex-gap-small margin-top-small">
+                            <button type="button" class="btn-secondary">Ver oferta</button>
+                            <button type="button" class="btn-primary">Abrir chat</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacto">
+        <h2>Contacto y Soporte PostWork</h2>
+        <p>¿Tenés alguna consulta sobre tus postulaciones? Escribinos:</p>
+        <ul>
+            <li>Email: <a href="mailto:soporte@postwork.com">soporte@postwork.com</a></li>
+            <li>Teléfono: <a href="tel:+543871234567">Llamar al +54 387 1234-5678</a></li>
+        </ul>
+        <p class="copyright">&copy; 2026 PostWork - Panel Integrado del Postulante.</p>
+    </footer>
+
+</body>
+</html>

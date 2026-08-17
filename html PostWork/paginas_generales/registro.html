@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostWork - Registro de Cuenta</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+
+    <nav class="main-nav">
+        <h2>PostWork</h2>
+        <a href="index.html">Inicio</a>
+        <a href="blog.html">Blog / Recursos</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="#contacto">Contacto</a>
+        <div class="nav-links">
+            <a href="login.html" class="btn-nav-secondary">Iniciar Sesión</a>
+            <a href="registro.html" class="btn-nav-primary active">Registrarse</a>
+        </div>
+    </nav>
+
+    <main class="container-form margin-top-large" style="flex: 1;">
+        <div class="card">
+            
+            <header class="text-center margin-bottom-medium">
+                <h1 class="section-header">Crea tu cuenta en PostWork</h1>
+                <p class="text-muted">Completá los datos para postularte a ofertas o publicar vacantes.</p>
+            </header>
+
+            <form action="perfil_usuario.html" method="POST">
+                <div class="form-group">
+                    <label for="nombre-registro" class="form-label">Nombre completo o Razón Social:</label>
+                    <input type="text" id="nombre-registro" name="nombre_registro" class="form-control" placeholder="Ej. Juan Pérez / Tech Solutions SRL" maxlength="80" autocomplete="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email-registro" class="form-label">Correo electrónico:</label>
+                    <input type="email" id="email-registro" name="email_registro" class="form-control" placeholder="tu_correo@ejemplo.com" maxlength="100" autocomplete="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo-cuenta" class="form-label">Tipo de cuenta:</label>
+                    <select id="tipo-cuenta" name="tipo_cuenta" class="form-control" required>
+                        <option value="candidato">Candidato / Talento IT</option>
+                        <option value="empresa">Empresa / Reclutador</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="password-registro" class="form-label">Contraseña:</label>
+                    <input type="password" id="password-registro" name="password_registro" class="form-control" placeholder="Mínimo 8 caracteres" minlength="8" maxlength="64" autocomplete="new-password" required>
+                </div>
+
+                <button type="submit" class="btn-primary block" style="width: 100%;">Crear Cuenta Gratis</button>
+            </form>
+
+            <div class="text-center margin-top-medium border-top padding-top-small" style="font-size: 0.9rem;">
+                <span class="text-muted">¿Ya tenés una cuenta activa?</span> <a href="login.html" class="font-bold color-primary">Iniciá sesión</a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer id="contacto">
+        <h2>Contacto y Soporte PostWork</h2>
+        <p>¿Tenés dudas con el registro? Comunicate con nuestro equipo:</p>
+        <ul>
+            <li>Email: <a href="mailto:soporte@postwork.com">soporte@postwork.com</a></li>
+            <li>Teléfono: <a href="tel:+543871234567">Llamar al +54 387 1234-5678</a></li>
+        </ul>
+        <p class="copyright">&copy; 2026 PostWork - Plataforma de Empleo IT.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostWork - Contacto</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <!-- Navegación principal -->
+    <nav class="main-nav">
+        <h2>PostWork</h2>
+        <a href="index.html">Inicio</a>
+        <a href="buscar_empleo.html">Buscar Empleo</a>
+        <a href="blog.html">Blog / Recursos</a>
+        <a href="perfil_usuario.html">Mi Perfil</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="contacto.html" class="active">Contacto</a>
+    </nav>
+
+    <!-- Encabezado de la página de contacto -->
+    <header class="hero-header">
+        <h1>Contacto e Información de Soporte</h1>
+        <p>¿Tenés dudas o consultas? Estamos para ayudarte.</p>
+    </header>
+
+    <!-- Sección principal con datos de contacto y formulario -->
+    <main class="container margin-top-large margin-bottom-large flex-sidebar">
+        
+        <section class="card flex-grow">
+            <h2 class="section-header">¿Necesitás ayuda rápida?</h2>
+            
+            <p><strong>Email:</strong> info@postwork.com</p>
+            <p><strong>Teléfono:</strong> +54 11 1234-5678</p>
+            <p><strong>Dirección:</strong> Av. Corrientes 1234, CABA, Argentina</p>
+            
+            <p><strong>Seguinos en nuestras redes:</strong> LinkedIn / Instagram</p>
+            
+            <div class="card-image-dark text-center margin-top-medium">
+                <p class="text-muted">[Mapa de Ubicación de Oficinas]</p>
+            </div>
+        </section>
+
+        <section class="card flex-grow">
+            <h2 class="section-header">Envianos un mensaje directo</h2>
+            
+            <form action="contacto.html" method="POST">
+                <div class="form-group">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre completo" maxlength="80" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="tu@email.com" maxlength="100" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="asunto" class="form-label">Asunto</label>
+                    <select id="asunto" name="asunto" class="form-control" required>
+                        <option value="">Seleccionar...</option>
+                        <option value="general">Consulta general</option>
+                        <option value="soporte">Soporte técnico</option>
+                        <option value="comercial">Comercial / Empresas</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" class="form-control" rows="6" maxlength="500" placeholder="Escribí tu consulta aquí..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary block">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de página con aviso de derechos -->
+    <footer>
+        <p class="copyright">&copy; 2026 PostWork - Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

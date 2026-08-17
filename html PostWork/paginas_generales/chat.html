@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostWork - Mensajes</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <!-- Navegación -->
+    <nav class="main-nav">
+        <h2>PostWork</h2>
+        <a href="index.html">Inicio</a>
+        <a href="buscar_empleo.html">Buscar Empleo</a>
+        <a href="blog.html">Blog / Recursos</a>
+        <a href="perfil_usuario.html">Mi Perfil</a>
+        <a href="postulaciones.html">Postulaciones</a>
+        <a href="chat.html" class="active">Mensajes</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <main class="main-content-wide">
+        
+        <!-- Panel izquierdo: conversaciones activas -->
+        <aside class="chat-sidebar">
+            <div class="chat-header">
+                <h2>Conversaciones activas</h2>
+                <form action="chat.html" method="GET" class="chat-search">
+                    <input type="search" id="buscar-conversacion" name="buscar_conversacion" maxlength="80" placeholder="Buscar conversación...">
+                </form>
+            </div>
+            
+            <ul class="chat-list">
+                <!-- Chat 1 (activo) -->
+                <li class="chat-item active">
+                    <div class="chat-item-header">
+                        <strong class="chat-item-name">TechCorp</strong>
+                        <small class="chat-item-time">10:30</small>
+                    </div>
+                    <p class="chat-item-status">(En línea)</p>
+                    <small class="chat-item-message">Gracias por tu interés en la posición...</small>
+                </li>
+
+                <!-- Chat 2 -->
+                <li class="chat-item">
+                    <div class="chat-item-header">
+                        <strong class="chat-item-name">CreativeStudio</strong>
+                        <small class="chat-item-time">Ayer</small>
+                    </div>
+                    <small class="chat-item-message">¿Cuándo podrías empezar?</small>
+                </li>
+
+                <!-- Chat 3 -->
+                <li class="chat-item">
+                    <div class="chat-item-header">
+                        <strong class="chat-item-name">BuildCo</strong>
+                        <small class="chat-item-time">Lun</small>
+                    </div>
+                    <small class="chat-item-message">Adjunto el contrato para que lo revises</small>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Panel derecho: sala de chat -->
+        <section class="chat-room">
+            
+            <!-- Cabecera de sala -->
+            <header class="chat-room-header">
+                <div class="chat-room-header-title">
+                    <div class="img-company-small">TC</div>
+                    <h3>TechCorp <small class="text-primary">(En línea)</small></h3>
+                </div>
+                <a href="#" class="chat-room-header-link">Ver perfil de empresa</a>
+            </header>
+
+            <!-- Historial de mensajes -->
+            <div role="log" aria-label="Historial de mensajes" class="chat-messages">
+                
+                <!-- Mensaje empresa 1 -->
+                <div class="chat-message received">
+                    <p class="chat-message-meta">TechCorp - 10:15</p>
+                    <div class="chat-message-bubble">
+                        Hola Juan, gracias por postularte a nuestra oferta de Desarrollador Full Stack.
+                    </div>
+                </div>
+                
+                <!-- Mensaje empresa 2 -->
+                <div class="chat-message received">
+                    <p class="chat-message-meta">TechCorp - 10:16</p>
+                    <div class="chat-message-bubble">
+                        Nos gustaría conocer más sobre tu experiencia con React.
+                    </div>
+                </div>
+
+                <!-- Mensaje usuario 1 -->
+                <div class="chat-message sent">
+                    <p class="chat-message-meta">Tú - 10:20</p>
+                    <div class="chat-message-bubble">
+                        ¡Hola! Muchas gracias por contactarme. Tengo más de 3 años de experiencia trabajando con React en proyectos de gran escala.
+                    </div>
+                </div>
+
+                <!-- Mensaje usuario 2 -->
+                <div class="chat-message sent">
+                    <p class="chat-message-meta">Tú - 10:21</p>
+                    <div class="chat-message-bubble">
+                        📄 <strong>CV_JuanPerez_2026.pdf</strong> (2.4 MB)<br><br>
+                        Te adjunto mi CV actualizado para que puedas revisar mi experiencia en detalle.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulario de envío -->
+            <footer class="chat-form">
+                <form action="chat.html" method="POST" class="chat-form-row">
+                    <button type="button" title="Adjuntar archivo" class="btn-icon">📎</button>
+                    <input type="text" id="mensaje-chat" name="mensaje" maxlength="500" placeholder="Escribí un mensaje..." class="chat-input" required>
+                    <button type="submit" class="chat-button">Enviar</button>
+                </form>
+            </footer>
+
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p class="copyright">&copy; 2026 PostWork - Sistema de Mensajería Seguro.</p>
+    </footer>
+
+</body>
+</html>

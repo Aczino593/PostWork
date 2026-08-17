@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostWork - Publicar Oferta</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+
+    <nav class="main-nav">
+        <h2>PostWork <span class="badge badge-info">Empresas</span></h2>
+        <a href="index.html">Inicio</a>
+        <a href="perfil_empresa.html">Mi Empresa</a>
+        <a href="publicar_trabajo.html" class="active">Publicar Empleo</a>
+        <a href="gestion_ofertas.html">Gestión de Ofertas</a>
+        <a href="FAQ.html">FAQ</a>
+    </nav>
+
+    <header class="hero-header-dark">
+        <h1>Publicar nueva oferta de trabajo</h1>
+        <p class="hero-subtext">Completá las especificaciones para atraer al mejor talento tecnológico.</p>
+    </header>
+
+    <main class="container-form margin-top-large" style="flex: 1;">
+        <div class="card margin-bottom-large">
+            <h2 class="section-header-corporate">Especificaciones de la vacante</h2>
+            
+            <form action="publicar_trabajo.html" method="POST">
+                <div class="form-group">
+                    <label for="titulo" class="form-label">Título del puesto</label>
+                    <input type="text" id="titulo" name="titulo" class="form-control" placeholder="Ej: Desarrollador Full Stack" maxlength="100" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="categoria" class="form-label">Categoría / Industria</label>
+                    <select id="categoria" name="categoria" class="form-control" required>
+                        <option value="">Seleccionar categoría...</option>
+                        <option value="tecnologia">Tecnología</option>
+                        <option value="diseno">Diseño</option>
+                        <option value="salud">Salud</option>
+                        <option value="educacion">Educación</option>
+                        <option value="administracion">Administración</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Modalidad de la jornada</label>
+                    <div class="flex flex-gap-medium margin-top-small">
+                        <label for="modalidad-presencial"><input type="radio" id="modalidad-presencial" name="modalidad" value="presencial"> Presencial</label>
+                        <label for="modalidad-remoto"><input type="radio" id="modalidad-remoto" name="modalidad" value="remoto" checked> Remoto</label>
+                        <label for="modalidad-hibrido"><input type="radio" id="modalidad-hibrido" name="modalidad" value="hibrido"> Híbrido</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Salario estimado mensual</label>
+                    <div class="flex flex-gap-small">
+                        <input type="number" id="salario-desde" name="salario_desde" min="0" placeholder="Desde" class="form-control" aria-label="Salario desde">
+                        <input type="number" id="salario-hasta" name="salario_hasta" min="0" placeholder="Hasta" class="form-control" aria-label="Salario hasta">
+                        <select id="moneda" name="moneda" class="form-control" style="width: 100px;" aria-label="Moneda de pago">
+                            <option value="ARS">ARS</option>
+                            <option value="USD">USD</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="jornada" class="form-label">Carga horaria</label>
+                    <select id="jornada" name="jornada" class="form-control" required>
+                        <option value="full-time">Full-time</option>
+                        <option value="part-time">Part-time</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="experiencia" class="form-label">Experiencia requerida</label>
+                    <select id="experiencia" name="experiencia" class="form-control" required>
+                        <option value="sin-experiencia">Sin experiencia previa</option>
+                        <option value="1-2">1-2 años de trayectoria</option>
+                        <option value="3-5">3-5 años de trayectoria</option>
+                        <option value="5+">+5 años de trayectoria</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcion" class="form-label">Descripción de tareas</label>
+                    <textarea id="descripcion" name="descripcion" class="form-control" rows="4" maxlength="1000" placeholder="Describe las responsabilidades y objetivos del puesto..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="requisitos" class="form-label">Requisitos excluyentes</label>
+                    <textarea id="requisitos" name="requisitos" class="form-control" rows="4" maxlength="1000" placeholder="Lista los requisitos necesarios para el puesto..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="beneficios" class="form-label">Beneficios del puesto</label>
+                    <textarea id="beneficios" name="beneficios" class="form-control" rows="4" maxlength="1000" placeholder="Describe los beneficios que ofrece la empresa..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha-limite" class="form-label">Fecha límite de postulación</label>
+                    <input type="date" id="fecha-limite" name="fecha_limite" class="form-control" required>
+                </div>
+
+                <div class="btn-group-horizontal margin-top-medium">
+                    <button type="reset" class="btn-secondary">Guardar borrador</button>
+                    <button type="submit" class="btn-primary">Publicar oferta de inmediato</button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 PostWork - Sistema de Carga de Vacantes Oficial.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostWork - Buscar Empleo</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="main-nav">
+        <h2>PostWork</h2>
+        <a href="index.html">Inicio</a>
+        <a href="buscar_empleo.html" class="active">Buscar Empleo</a>
+        <a href="blog.html">Blog / Recursos</a>
+        <a href="perfil_usuario.html">Mi Perfil</a>
+        <a href="postulaciones.html">Postulaciones</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- CABECERA DE LA SECCIÓN -->
+    <header class="hero-header-dark">
+        <h1>Explora las ofertas disponibles</h1>
+        <p class="hero-subtext">Encuentra el puesto tecnológico que mejor se adapte a tu perfil utilizando nuestros filtros.</p>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="container-wide margin-top-large margin-bottom-large">
+        
+        <!-- Herramientas de búsqueda y filtros -->
+        <section class="card margin-bottom-large">
+            <h2 class="section-header-main">Herramientas de búsqueda</h2>
+            
+            <form action="buscar_empleo.html" method="GET">
+                <div class="form-row">
+                    <input type="text" id="puesto" name="puesto" class="form-control-flex" placeholder="Puesto, tecnología o empresa (Ej. React)..." maxlength="80">
+                    <input type="text" id="ubicacion" name="ubicacion" class="form-control-location" placeholder="Ubicación (ej: Remoto, Buenos Aires)..." maxlength="80">
+                    <button type="submit" class="btn-primary">Buscar</button>
+                </div>
+
+                <div class="form-section">
+                    <div>
+                        <strong>Jornada laboral</strong>
+                        <label class="form-checkbox"><input type="checkbox" id="jornada-completa" name="jornada" value="tiempo-completo"> Tiempo completo</label>
+                        <label class="form-checkbox"><input type="checkbox" id="jornada-parcial" name="jornada" value="medio-tiempo"> Medio tiempo</label>
+                    </div>
+                    <div>
+                        <strong>Modalidad de trabajo</strong>
+                        <label class="form-checkbox"><input type="checkbox" id="modalidad-remoto" name="modalidad" value="remoto"> Remoto</label>
+                        <label class="form-checkbox"><input type="checkbox" id="modalidad-hibrido" name="modalidad" value="hibrido"> Híbrido</label>
+                        <label class="form-checkbox"><input type="checkbox" id="modalidad-presencial" name="modalidad" value="presencial"> Presencial</label>
+                    </div>
+                    <div>
+                        <strong>Experiencia requerida</strong>
+                        <label class="form-radio"><input type="radio" id="exp-trainee" name="experiencia" value="trainee" checked> Trainee / Junior</label>
+                        <label class="form-radio"><input type="radio" id="exp-semi" name="experiencia" value="semi-senior"> Semi-Senior</label>
+                        <label class="form-radio"><input type="radio" id="exp-senior" name="experiencia" value="senior"> Senior</label>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- Resultados de búsqueda -->
+        <section class="card">
+            <h2 class="section-header-main">Resultados de búsqueda</h2>
+            
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Puesto</th>
+                            <th>Empresa</th>
+                            <th>Ubicación</th>
+                            <th>Modalidad</th>
+                            <th class="text-center">Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-bold">Desarrollador Frontend React</td>
+                            <td class="color-primary">Tech Solutions</td>
+                            <td class="text-muted">Buenos Aires</td>
+                            <td class="text-muted">Híbrido</td>
+                            <td class="text-center">
+                                <div class="table-actions">
+                                    <button type="button" class="btn-secondary">Ver detalle</button>
+                                    <button type="button" class="btn-primary">Postularse</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">Diseñador UX/UI Senior</td>
+                            <td class="color-primary">Creative Studio</td>
+                            <td class="text-muted">Global</td>
+                            <td class="text-muted">Remoto</td>
+                            <td class="text-center">
+                                <div class="table-actions">
+                                    <button type="button" class="btn-secondary">Ver detalle</button>
+                                    <button type="button" class="btn-primary">Postularse</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">QA Analyst Junior</td>
+                            <td class="color-primary">Global IT</td>
+                            <td class="text-muted">Córdoba</td>
+                            <td class="text-muted">Presencial</td>
+                            <td class="text-center">
+                                <div class="table-actions">
+                                    <button type="button" class="btn-secondary">Ver detalle</button>
+                                    <button type="button" class="btn-primary">Postularse</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer id="contacto">
+        <h2>Contacto y Soporte PostWork</h2>
+        <p>¿Tenés alguna consulta sobre la búsqueda laboral? Escribinos:</p>
+        
+        <ul class="list-unstyled">
+            <li><strong>Email:</strong> <a href="mailto:soporte@postwork.com">soporte@postwork.com</a></li>
+            <li><strong>Teléfono:</strong> <a href="tel:+543871234567">Llamar al +54 387 1234-5678</a></li>
+        </ul>
+        
+        <p class="copyright">&copy; 2026 PostWork - Panel Integrado del Postulante.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostWork - Gestionar Mis Ofertas</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+
+    <nav class="main-nav">
+        <h2>PostWork</h2>
+        <a href="index.html">Inicio</a>
+        <a href="buscar_empleo.html">Buscar Empleo</a>
+        <a href="perfil_usuario.html">Mi Perfil</a>
+    </nav>
+
+    <header class="hero-header-dark">
+        <h1>Gestionar mis ofertas</h1>
+        <p class="hero-subtext">Administra los puestos vigentes, revisa borradores antiguos o analiza convocatorias finalizadas.</p>
+    </header>
+
+    <main class="container-wide margin-top-large" style="flex: 1;">
+        
+        <div class="flex flex-gap-small margin-bottom-medium">
+            <button type="button" class="btn-filter active">Activas</button>
+            <button type="button" class="btn-filter">Borradores</button>
+            <button type="button" class="btn-filter">Cerradas</button>
+        </div>
+
+        <section class="card margin-bottom-large">
+            <h2 class="section-header-corporate">Listado de ofertas publicadas</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Título del puesto</th>
+                            <th>Categoría</th>
+                            <th>Modalidad</th>
+                            <th>Postulantes</th>
+                            <th>Estado</th>
+                            <th>Fecha</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-bold">Desarrollador Full Stack</td>
+                            <td>Tecnología</td>
+                            <td>Remoto</td>
+                            <td class="color-primary">24</td>
+                            <td><span class="badge badge-success">Activa</span></td>
+                            <td class="color-secondary">15 Abr 2026</td>
+                            <td>
+                                <div class="table-actions">
+                                    <button type="button" class="btn-secondary">Ver</button>
+                                    <button type="button" class="btn-danger">Borrar</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">Diseñador UX/UI</td>
+                            <td>Diseño</td>
+                            <td>Híbrido</td>
+                            <td class="color-primary">18</td>
+                            <td><span class="badge badge-success">Activa</span></td>
+                            <td class="color-secondary">12 Abr 2026</td>
+                            <td>
+                                <div class="table-actions">
+                                    <button type="button" class="btn-secondary">Ver</button>
+                                    <button type="button" class="btn-danger">Borrar</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 PostWork - Panel Corporativo Empresarial.</p>
+    </footer>
+
+</body>
+</html>
