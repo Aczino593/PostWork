@@ -1,13 +1,8 @@
-/* ============================================================
-   POSTWORK - STYLESHEET CENTRALIZADO
-   Reset CSS, Variables Globales, y Componentes Reutilizables
-   ============================================================ */
-
 /* VARIABLES GLOBALES */
 :root {
   --primary: #2563eb;
   --primary-hover: #1d4ed8;
-  --secondary: #4285f4;
+  --secondary: #2563eb;
   --dark: #1a1a1a;
   --dark-surface: #2d3748;
   --bg-main: #f4f6f9;
@@ -16,12 +11,12 @@
   --border-color: #e2e8f0;
   --border-input: #cbd5e1;
   --border-divider: #f1f3f5;
-  --text-main: #333333;
-  --text-dark: #1a1a1a;
-  --text-muted: #64748b;
-  --text-gray: #666666;
-  --danger: #ef4444;
-  --success: #10b981;
+  --text-main: #1f2937;
+  --text-dark: #111827;
+  --text-muted: #475569; /* Ajustado para mayor contraste en fondo claro */
+  --text-gray: #4b5563;  /* Ajustado para mayor contraste */
+  --danger: #dc2626;
+  --success: #16a34a;
 }
 
 /* RESET Y ESTILOS GLOBALES */
@@ -35,6 +30,13 @@ body {
   padding: 0;
   background-color: var(--bg-main);
   color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 html {
@@ -59,14 +61,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .main-nav h2 {
-  color: white;
+  color: #ffffff;
   margin-top: 0;
   display: inline-block;
   margin-right: 30px;
 }
 
 .main-nav a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   margin: 0 15px;
 }
@@ -98,7 +100,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .btn-nav-primary {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   background-color: var(--primary);
   padding: 7px 14px;
@@ -110,15 +112,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 /* ENCABEZADOS Y SECCIONES */
 .hero-header {
-  background-color: #3b82f6;
-  color: white;
+  background-color: #1e40af; /* Azul oscuro optimizado para contraste WCAG AAA */
+  color: #ffffff;
   padding: 50px 20px 40px 20px;
   text-align: center;
 }
 
 .hero-header-dark {
   background: linear-gradient(135deg, var(--dark), var(--dark-surface));
-  color: white;
+  color: #ffffff;
   padding: 35px;
   text-align: center;
 }
@@ -143,13 +145,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .hero-subtext {
-  color: #cbd5e1;
+  color: #e2e8f0;
   font-size: 15px;
 }
 
 .header-corporate {
-  background-color: #3b82f6;
-  color: white;
+  background-color: #1e40af; /* Ajustado para alto contraste */
+  color: #ffffff;
   padding: 35px;
   border-radius: 8px;
   box-sizing: border-box;
@@ -164,7 +166,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .header-corporate p {
   margin: 0;
   font-size: 16px;
-  opacity: 0.9;
+  color: #f8fafc;
 }
 
 /* CONTENEDORES Y LAYOUTS */
@@ -337,7 +339,7 @@ main > section > header p {
 /* BOTONES */
 .btn-primary {
   background-color: var(--primary);
-  color: white;
+  color: #ffffff;
   border: none;
   border-radius: 4px;
   padding: 10px 20px;
@@ -352,7 +354,7 @@ main > section > header p {
 
 .btn-secondary {
   background-color: #f1f5f9;
-  color: #334155;
+  color: #1e293b;
   border: 1px solid var(--border-input);
   padding: 8px 14px;
   border-radius: 4px;
@@ -363,7 +365,7 @@ main > section > header p {
 
 .btn-success {
   background-color: var(--success);
-  color: white;
+  color: #ffffff;
   padding: 8px 16px;
   border-radius: 4px;
   font-size: 14px;
@@ -375,7 +377,7 @@ main > section > header p {
 
 .btn-danger {
   background-color: var(--danger);
-  color: white;
+  color: #ffffff;
   border: none;
   padding: 6px 12px;
   border-radius: 4px;
@@ -412,7 +414,7 @@ main > section > header p {
 
 .btn-filter {
   background-color: var(--bg-card);
-  color: #475569;
+  color: #334155;
   border: 1px solid var(--border-input);
   padding: 8px 16px;
   border-radius: 20px;
@@ -422,7 +424,7 @@ main > section > header p {
 
 .btn-filter.active {
   background-color: var(--primary);
-  color: white;
+  color: #ffffff;
   border: none;
   font-weight: bold;
 }
@@ -457,6 +459,7 @@ main > section > header p {
   border-radius: 4px;
   box-sizing: border-box;
   font-size: 14px;
+  color: var(--text-main);
 }
 
 .form-control-flex {
@@ -518,7 +521,7 @@ main > section > header p {
   gap: 40px;
   flex-wrap: wrap;
   font-size: 14px;
-  color: #475569;
+  color: #334155;
 }
 
 .form-section > div {
@@ -585,7 +588,7 @@ table {
 
 table thead {
   border-bottom: 2px solid var(--border-color);
-  color: #475569;
+  color: #334155;
 }
 
 table thead th {
@@ -606,7 +609,7 @@ table tbody td.font-bold {
 }
 
 table tbody td.color-primary {
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 table tbody td.color-secondary {
@@ -630,22 +633,22 @@ table tbody td.color-secondary {
 
 .badge-warning {
   background-color: #fef3c7;
-  color: #d97706;
+  color: #b45309;
 }
 
 .badge-info {
   background-color: #dbeafe;
-  color: #1d4ed8;
+  color: #1e40af;
 }
 
 .badge-success {
   background-color: #dcfce7;
-  color: #15803d;
+  color: #166534;
 }
 
 .badge-error {
   background-color: #fee2e2;
-  color: #b91c1c;
+  color: #991b1b;
 }
 
 .badge-status {
@@ -658,7 +661,7 @@ table tbody td.color-secondary {
 
 .badge-tag {
   background-color: #f1f5f9;
-  color: #334155;
+  color: #1e293b;
   padding: 6px 12px;
   border-radius: 4px;
   font-size: 13px;
@@ -718,7 +721,7 @@ img {
 
 .img-logo {
   border-radius: 8px;
-  border: 2px solid white;
+  border: 2px solid #ffffff;
 }
 
 .img-company-small {
@@ -730,7 +733,7 @@ img {
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  color: #475569;
+  color: #334155;
 }
 
 /* LISTAS */
@@ -765,7 +768,7 @@ img {
 .text-muted { color: var(--text-muted); }
 .text-gray { color: var(--text-gray); }
 .text-dark { color: var(--text-dark); }
-.text-white { color: white; }
+.text-white { color: #ffffff; }
 .text-light { color: #f8fafc; }
 .text-error { color: #dc2626; }
 .text-success { color: #16a34a; }
@@ -872,7 +875,7 @@ img {
 
 .chat-item-message {
   font-size: 12px;
-  color: #475569;
+  color: #334155;
   display: block;
   white-space: nowrap;
   overflow: hidden;
@@ -944,7 +947,7 @@ img {
 
 .chat-message-meta {
   font-size: 12px;
-  color: #475569;
+  color: #334155;
   font-weight: bold;
   margin-bottom: 4px;
 }
@@ -962,13 +965,13 @@ img {
 
 .chat-message.sent .chat-message-bubble {
   background-color: var(--primary);
-  color: white;
+  color: #ffffff;
   border-radius: 12px 12px 0 12px;
 }
 
 .chat-message.received .chat-message-bubble {
   background-color: var(--border-color);
-  color: #1e293b;
+  color: #0f172a;
   border: 1px solid var(--border-input);
   border-radius: 12px 12px 12px 0;
 }
@@ -997,7 +1000,7 @@ img {
 
 .chat-button {
   background-color: var(--primary);
-  color: white;
+  color: #ffffff;
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
@@ -1009,7 +1012,7 @@ img {
 /* PIE DE PÁGINA */
 footer {
   background-color: var(--dark);
-  color: white;
+  color: #ffffff;
   text-align: center;
   padding: 40px 20px;
   margin-top: 60px;
@@ -1024,13 +1027,13 @@ footer h2, footer h3 {
 }
 
 footer p {
-  color: #94a3b8;
+  color: #cbd5e1; /* Aclarado para mayor legibilidad sobre fondo oscuro */
   font-size: 13px;
   margin-bottom: 20px;
 }
 
 footer a {
-  color: #60a5fa;
+  color: #93c5fd;
   text-decoration: none;
 }
 
@@ -1049,7 +1052,7 @@ footer ul li {
 }
 
 footer .copyright {
-  color: var(--text-muted);
+  color: #cbd5e1; /* Corregido contraste sobre el fondo azul/oscuro del footer */
   font-size: 12px;
   margin-top: 25px;
 }
@@ -1115,7 +1118,7 @@ footer .copyright {
 /* PERFILES Y PANELES */
 .profile-header {
   background: linear-gradient(135deg, var(--dark), var(--dark-surface));
-  color: white;
+  color: #ffffff;
   padding: 35px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -1203,7 +1206,7 @@ footer .copyright {
 
 .profile-experience-item p {
   margin: 0;
-  color: #555;
+  color: var(--text-main);
   font-size: 14px;
   line-height: 1.5;
 }
@@ -1275,14 +1278,4 @@ hr {
   table tbody td {
     padding: 8px;
   }
-}
-/* Modificación para Sticky Footer */
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1;
 }

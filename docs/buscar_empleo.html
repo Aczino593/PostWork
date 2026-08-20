@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PostWork - Buscar Empleo</title>
+    
+    <!-- 1. Etiqueta <title> con Palabra Clave Principal -->
+    <title>Buscar Trabajo IT, Programador Remoto y Analista de Datos | PostWork</title>
+
+    <!-- 2. Meta description descriptiva y llamativa -->
+    <meta name="description" content="Explora vacantes actualizadas para trabajo de desarrollador software, analista de datos y programador remoto en Argentina. ¡Postúlate de forma directa en PostWork!">
+    
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -22,8 +28,9 @@
 
     <!-- CABECERA DE LA SECCIÓN -->
     <header class="hero-header-dark">
-        <h1>Explora las ofertas disponibles</h1>
-        <p class="hero-subtext">Encuentra el puesto tecnológico que mejor se adapte a tu perfil utilizando nuestros filtros.</p>
+        <!-- 3. Encabezado H1 principal con palabras clave -->
+        <h1>Buscar Trabajo IT y Vacantes Tecnológicas en Argentina</h1>
+        <p class="hero-subtext">Encuentra el puesto de desarrollador software o analista de datos que mejor se adapte a tu perfil utilizando nuestros filtros.</p>
     </header>
 
     <!-- CONTENEDOR PRINCIPAL -->
@@ -31,13 +38,14 @@
         
         <!-- Herramientas de búsqueda y filtros -->
         <section class="card margin-bottom-large">
-            <h2 class="section-header-main">Herramientas de búsqueda</h2>
+            <!-- 4. Encabezados jerárquicos secundarios (H2) -->
+            <h2 class="section-header-main">Filtros para Buscar Trabajo IT y Ofertas Laborales</h2>
             
             <form action="buscar_empleo.html" method="GET">
                 <div class="form-row">
-                    <input type="text" id="puesto" name="puesto" class="form-control-flex" placeholder="Puesto, tecnología o empresa (Ej. React)..." maxlength="80">
+                    <input type="text" id="puesto" name="puesto" class="form-control-flex" placeholder="Puesto, tecnología o empresa (Ej. React, Analista de Datos)..." maxlength="80">
                     <input type="text" id="ubicacion" name="ubicacion" class="form-control-location" placeholder="Ubicación (ej: Remoto, Buenos Aires)..." maxlength="80">
-                    <button type="submit" class="btn-primary">Buscar</button>
+                    <button type="submit" class="btn-primary">Buscar Trabajo IT</button>
                 </div>
 
                 <div class="form-section">
@@ -48,13 +56,13 @@
                     </div>
                     <div>
                         <strong>Modalidad de trabajo</strong>
-                        <label class="form-checkbox"><input type="checkbox" id="modalidad-remoto" name="modalidad" value="remoto"> Remoto</label>
+                        <label class="form-checkbox"><input type="checkbox" id="modalidad-remoto" name="modalidad" value="remoto"> Programador Remoto</label>
                         <label class="form-checkbox"><input type="checkbox" id="modalidad-hibrido" name="modalidad" value="hibrido"> Híbrido</label>
                         <label class="form-checkbox"><input type="checkbox" id="modalidad-presencial" name="modalidad" value="presencial"> Presencial</label>
                     </div>
                     <div>
                         <strong>Experiencia requerida</strong>
-                        <label class="form-radio"><input type="radio" id="exp-trainee" name="experiencia" value="trainee" checked> Trainee / Junior</label>
+                        <label class="form-radio"><input type="radio" id="exp-trainee" name="experiencia" value="trainee" checked> Desarrollador Junior / Trainee</label>
                         <label class="form-radio"><input type="radio" id="exp-semi" name="experiencia" value="semi-senior"> Semi-Senior</label>
                         <label class="form-radio"><input type="radio" id="exp-senior" name="experiencia" value="senior"> Senior</label>
                     </div>
@@ -64,7 +72,7 @@
 
         <!-- Resultados de búsqueda -->
         <section class="card">
-            <h2 class="section-header-main">Resultados de búsqueda</h2>
+            <h2 class="section-header-main">Resultados: Vacantes para Desarrollador Software y Analista de Datos</h2>
             
             <div class="table-responsive">
                 <table>
@@ -79,7 +87,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="font-bold">Desarrollador Frontend React</td>
+                            <td class="font-bold">Desarrollador Software Frontend React</td>
                             <td class="color-primary">Tech Solutions</td>
                             <td class="text-muted">Buenos Aires</td>
                             <td class="text-muted">Híbrido</td>
@@ -91,7 +99,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="font-bold">Diseñador UX/UI Senior</td>
+                            <td class="font-bold">Trabajo Programador Remoto / UX/UI Senior</td>
                             <td class="color-primary">Creative Studio</td>
                             <td class="text-muted">Global</td>
                             <td class="text-muted">Remoto</td>
@@ -103,7 +111,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="font-bold">QA Analyst Junior</td>
+                            <td class="font-bold">Trabajo Analista de Datos Junior / QA</td>
                             <td class="color-primary">Global IT</td>
                             <td class="text-muted">Córdoba</td>
                             <td class="text-muted">Presencial</td>
@@ -123,14 +131,14 @@
     <!-- PIE DE PÁGINA -->
     <footer id="contacto">
         <h2>Contacto y Soporte PostWork</h2>
-        <p>¿Tenés alguna consulta sobre la búsqueda laboral? Escribinos:</p>
+        <p>¿Tenés alguna consulta sobre la búsqueda laboral de empleos IT? Escribinos:</p>
         
         <ul class="list-unstyled">
             <li><strong>Email:</strong> <a href="mailto:soporte@postwork.com">soporte@postwork.com</a></li>
             <li><strong>Teléfono:</strong> <a href="tel:+543871234567">Llamar al +54 387 1234-5678</a></li>
         </ul>
         
-        <p class="copyright">&copy; 2026 PostWork - Panel Integrado del Postulante.</p>
+        <p class="copyright">&copy; 2026 PostWork - Plataforma de Empleos IT en Argentina.</p>
     </footer>
 
 </body>

@@ -1,0 +1,11 @@
+# Permitir el rastreo general a todos los motores de búsqueda
+User-agent: *
+Allow: /
+
+# Bloquear el rastreo de páginas de autenticación o privadas
+Disallow: /login
+Disallow: /registro
+Disallow: /admin/
+
+# Indicar la ubicación exacta del Sitemap
+Sitemap: https://www.postwork.com/sitemap.xml
