@@ -3,13 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- 1. Etiqueta <title> con Palabra Clave Principal -->
     <title>Mi Perfil Profesional | Empleos IT en Argentina | PostWork</title>
-
-    <!-- 2. Meta description descriptiva y llamativa -->
     <meta name="description" content="Gestiona tu perfil profesional para conseguir trabajo en tecnología. Sube tu CV en PDF y destaca ante las mejores empresas IT de Argentina.">
-    
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -23,6 +18,11 @@
         <a href="postulaciones.html">Postulaciones</a>
         <a href="FAQ.html">FAQ</a>
         <a href="#contacto">Contacto</a>
+
+        <div class="nav-links">
+            <span id="reloj-tiempo-real" aria-live="polite">00:00:00</span>
+            <button type="button" id="btn-modo-oscuro" class="btn-secondary" title="Cambiar tema">Modo Oscuro</button>
+        </div>
     </nav>
 
     <main class="container-wide margin-top-medium">
@@ -42,7 +42,6 @@
             </div>
 
             <div class="profile-info">
-                <!-- 3. Encabezado H1 principal optimizado -->
                 <h1>Juan Pérez - Perfil Profesional IT</h1>
                 <p class="title">Desarrollador Software Full Stack</p>
                 <p class="location">Buenos Aires, Argentina</p>
@@ -54,7 +53,6 @@
             
             <aside class="card-sidebar">
                 <section class="margin-bottom-medium">
-                    <!-- 4. Encabezados jerárquicos secundarios H2 -->
                     <h2 class="section-header-sidebar">Contacto Directo</h2>
                     <ul class="list-unstyled">
                         <li><strong>Correo:</strong> juan.perez@email.com</li>
@@ -101,8 +99,9 @@
                             <button type="button" class="btn-danger">Eliminar</button>
                         </div>
                     </div>
-                    <form action="perfil_usuario.html" method="POST" enctype="multipart/form-data" class="form-upload">
-                        <input type="file" name="cv_usuario" accept=".pdf" required>
+                    <form action="perfil_usuario.html" method="POST" enctype="multipart/form-data" class="form-upload form-con-resumen" id="form-cv">
+                        <label for="cv_usuario">Subir nuevo archivo de CV (PDF):</label>
+                        <input type="file" id="cv_usuario" name="cv_usuario" accept=".pdf" required>
                         <button type="submit" class="btn-success">+ Subir nuevo CV</button>
                     </form>
                 </article>
@@ -138,5 +137,6 @@
         <p class="copyright">&copy; 2026 PostWork - Perfil Profesional para Empleos IT en Argentina.</p>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>

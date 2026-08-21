@@ -3,13 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- 1. Etiqueta <title> SEO -->
     <title>Preguntas Frecuentes (FAQ) e Información Institucional | PostWork</title>
-
-    <!-- 2. Meta description informativa sobre la plataforma -->
     <meta name="description" content="Conoce la misión de PostWork y resuelve tus dudas sobre cómo postularte a vacantes IT, subir tu CV en PDF y publicar ofertas laborales en Argentina.">
-    
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -20,9 +15,11 @@
         <a href="index.html">Inicio</a>
         <a href="blog.html">Blog / Recursos</a>
         <a href="FAQ.html" class="active">FAQ</a>
-        <a href="#contacto">Contacto</a>
+        <a href="contacto.html">Contacto</a>
         
         <div class="nav-links">
+            <span id="reloj-tiempo-real" aria-live="polite">00:00:00</span>
+            <button type="button" id="btn-modo-oscuro" class="btn-secondary" title="Cambiar tema">Modo Oscuro</button>
             <a href="login.html" class="btn-nav-secondary">Iniciar Sesión</a>
             <a href="registro.html" class="btn-nav-primary">Registrarse</a>
         </div>
@@ -31,14 +28,11 @@
     <!-- CONTENEDOR PRINCIPAL -->
     <main class="container-medium margin-top-large margin-bottom-large flex-column flex-gap-large">
         
-        <!-- CABECERA DE LA PÁGINA CORPORATIVA -->
         <header class="header-corporate">
-            <!-- 3. Encabezado H1 con palabras clave -->
             <h1>Centro de Ayuda, FAQ e Información Institucional</h1>
             <p>Conocé más sobre nuestra plataforma de empleos IT y resolvé tus dudas frecuentes.</p>
         </header>
 
-        <!-- SECCIÓN: QUIÉNES SOMOS -->
         <section class="card">
             <h2 class="section-header-corporate">Quiénes Somos - Plataforma de Empleos IT</h2>
             <p><strong>Bienvenido a PostWork</strong>, la plataforma digital diseñada para transformar la búsqueda de empleo y el reclutamiento técnico en Argentina.</p>
@@ -50,12 +44,11 @@
             <p>Optimizamos los procesos de selección organizada permitiendo a los usuarios registrar perfiles profesionales detallados, adjuntar su CV directamente en formato PDF y aplicar a ofertas laborales activas en un solo clic. Al mismo tiempo, brindamos a las organizaciones las herramientas necesarias para gestionar sus vacantes con máxima eficiencia.</p>
         </section>
 
-        <!-- SECCIÓN: PREGUNTAS FRECUENTES (FAQ) -->
+        <!-- SECCIÓN DE MENÚS INTERACTIVOS (Punto 4: Desplegables Mostrar/Ocultar) -->
         <section class="card">
             <h2 class="section-header-corporate">Preguntas Frecuentes (FAQ) sobre Ofertas Laborales</h2>
             <p class="text-gray margin-bottom-medium">Resolvé tus dudas sobre el funcionamiento general de la plataforma de empleos PostWork.</p>
 
-            <!-- Bloque Candidatos -->
             <h3 class="section-header-sidebar">Sección Candidatos y Trabajo IT</h3>
             
             <details class="card-sidebar margin-bottom-medium">
@@ -68,7 +61,6 @@
                 <p class="margin-top-small text-muted">El formato PDF asegura que la estructura, las tipografías y el diseño de tu currículum no se alteren al ser leído por los selectores o por nuestros filtros automáticos de búsqueda, garantizando una presentación ideal.</p>
             </details>
 
-            <!-- Bloque Empresas -->
             <h3 class="section-header-sidebar dark">Sección Empresas y Reclutamiento IT</h3>
             
             <details class="card-sidebar margin-bottom-medium">
@@ -92,5 +84,7 @@
         <p class="copyright">&copy; 2026 PostWork - Plataforma de Empleo Organizada en Argentina.</p>
     </footer>
 
+    <!-- Script JS vinculado correctamente para activar la hora y el modo oscuro -->
+    <script src="js/main.js"></script>
 </body>
 </html>

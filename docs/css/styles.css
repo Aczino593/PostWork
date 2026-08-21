@@ -13,13 +13,13 @@
   --border-divider: #f1f3f5;
   --text-main: #1f2937;
   --text-dark: #111827;
-  --text-muted: #475569; /* Ajustado para mayor contraste en fondo claro */
-  --text-gray: #4b5563;  /* Ajustado para mayor contraste */
+  --text-muted: #475569;
+  --text-gray: #4b5563;
   --danger: #dc2626;
   --success: #16a34a;
 }
 
-/* RESET Y ESTILOS GLOBALES */
+/* RESET Y ESTILOS BASE */
 * {
   box-sizing: border-box;
 }
@@ -43,7 +43,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* INTERACTIVIDAD Y ACCESIBILIDAD */
+/* TRANSICIONES Y FOCUS */
 a, button, input, select, textarea {
   transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
@@ -53,7 +53,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   outline-offset: 2px;
 }
 
-/* NAVEGACIÓN PRINCIPAL */
+/* NAV PRINCIPAL */
 .main-nav {
   background-color: var(--dark);
   padding: 20px;
@@ -110,9 +110,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   display: inline-block;
 }
 
-/* ENCABEZADOS Y SECCIONES */
+/* ENCABEZADOS Y HERO */
 .hero-header {
-  background-color: #1e40af; /* Azul oscuro optimizado para contraste WCAG AAA */
+  background-color: #1e40af;
   color: #ffffff;
   padding: 50px 20px 40px 20px;
   text-align: center;
@@ -150,7 +150,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .header-corporate {
-  background-color: #1e40af; /* Ajustado para alto contraste */
+  background-color: #1e40af;
   color: #ffffff;
   padding: 35px;
   border-radius: 8px;
@@ -169,7 +169,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   color: #f8fafc;
 }
 
-/* CONTENEDORES Y LAYOUTS */
+/* CONTENEDORES Y MAQUETADO */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -209,7 +209,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   gap: 20px;
 }
 
-/* TARJETAS Y SECCIONES */
+/* TARJETAS Y PANELES */
 .card {
   background-color: var(--bg-card);
   padding: 30px;
@@ -278,7 +278,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   flex-direction: column;
 }
 
-/* TÍTULOS Y ENCABEZADOS */
+/* TITULOS DE SECCIONES */
 main > section > header {
   text-align: center;
   margin-bottom: 30px;
@@ -622,7 +622,7 @@ table tbody td.color-secondary {
   justify-content: center;
 }
 
-/* DISTINTIVOS Y BADGES */
+/* BADGES Y ETIQUETAS */
 .badge {
   display: inline-block;
   padding: 4px 10px;
@@ -681,7 +681,7 @@ table tbody td.color-secondary {
 .padding-medium { padding: 20px; }
 .padding-large { padding: 40px; }
 
-/* ALINEACIONES Y DISPLAY */
+/* ALINEACION Y CLASES AUXILIARES */
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
@@ -700,7 +700,7 @@ table tbody td.color-secondary {
 .flex-grow { flex-grow: 1; }
 .flex-sidebar { display: flex; gap: 30px; flex-wrap: wrap; align-items: flex-start; }
 
-/* IMÁGENES */
+/* IMAGENES Y AVATARES */
 img {
   max-width: 100%;
   height: auto;
@@ -797,7 +797,7 @@ img {
 .shadow-md { box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
 .shadow-lg { box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
 
-/* CHAT Y MENSAJERÍA */
+/* CHAT */
 .chat-sidebar, .card-chat {
   width: 30%;
   background: var(--bg-card);
@@ -1009,7 +1009,7 @@ img {
   font-size: 14px;
 }
 
-/* PIE DE PÁGINA */
+/* FOOTER */
 footer {
   background-color: var(--dark);
   color: #ffffff;
@@ -1027,7 +1027,7 @@ footer h2, footer h3 {
 }
 
 footer p {
-  color: #cbd5e1; /* Aclarado para mayor legibilidad sobre fondo oscuro */
+  color: #cbd5e1;
   font-size: 13px;
   margin-bottom: 20px;
 }
@@ -1052,12 +1052,12 @@ footer ul li {
 }
 
 footer .copyright {
-  color: #cbd5e1; /* Corregido contraste sobre el fondo azul/oscuro del footer */
+  color: #cbd5e1;
   font-size: 12px;
   margin-top: 25px;
 }
 
-/* TARJETAS DE EMPLEOS/POSTULACIONES */
+/* TARJETAS DE EMPLEOS */
 .job-card {
   background: var(--bg-card);
   border-radius: 8px;
@@ -1115,7 +1115,7 @@ footer .copyright {
   border-radius: 4px;
 }
 
-/* PERFILES Y PANELES */
+/* PERFIL DE USUARIO */
 .profile-header {
   background: linear-gradient(135deg, var(--dark), var(--dark-surface));
   color: #ffffff;
@@ -1211,7 +1211,7 @@ footer .copyright {
   line-height: 1.5;
 }
 
-/* ELEMENTOS ESPECIALES Y SEPARADORES */
+/* SEPARADORES */
 hr {
   border: none;
   border-top: 1px solid #eee;
@@ -1227,6 +1227,137 @@ hr {
   border: none;
   border-top: 1px solid var(--border-divider);
   margin: 35px 0;
+}
+
+/* ACCESIBILIDAD */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ==========================================================================
+   ESTILOS NUEVOS PARA LOS REQUISITOS DEL TP
+   ========================================================================== */
+
+/* ==========================================================================
+   1. MODO OSCURO (Punto 6 + CORRECCIONES DE CONTRASTE Y LEGIBILIDAD)
+   ========================================================================== */
+
+body.dark-theme {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+}
+
+/* Tarjetas, Paneles y Contenedores */
+body.dark-theme .card,
+body.dark-theme .profile-section,
+body.dark-theme .job-card,
+body.dark-theme .card-sidebar,
+body.dark-theme .card-chat,
+body.dark-theme .card-chat-main,
+body.dark-theme .form-container,
+body.dark-theme .card-sidebar summary {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+/* Campos de entrada y Formularios */
+body.dark-theme .form-control,
+body.dark-theme .chat-input {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+  border-color: #334155 !important;
+}
+
+/* Encabezados Principales, Secciones y Preguntas (summary) */
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme summary,
+body.dark-theme .section-header,
+body.dark-theme .section-header-corporate,
+body.dark-theme .section-header-sidebar,
+body.dark-theme .job-card-title,
+body.dark-theme table tbody td {
+  color: #f8fafc !important;
+}
+
+/* Subtítulos en azul con alto contraste */
+body.dark-theme .text-primary,
+body.dark-theme h3.text-primary {
+  color: #60a5fa !important;
+}
+
+/* Sobrescribir textos oscuros y grises apagados */
+body.dark-theme .text-dark,
+body.dark-theme .font-bold.text-dark,
+body.dark-theme .text-main {
+  color: #f1f5f9 !important;
+}
+
+body.dark-theme .text-muted,
+body.dark-theme .text-gray,
+body.dark-theme table thead {
+  color: #cbd5e1 !important;
+}
+
+/* Bordes y Líneas Separadoras */
+body.dark-theme .section-header-corporate,
+body.dark-theme .border-bottom,
+body.dark-theme .border-top {
+  border-color: #475569 !important;
+}
+
+/* Resaltado para navegación por teclado */
+body.dark-theme summary:focus {
+  outline: 2px solid #60a5fa;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+/* 2. MODAL Y GALERIA (Punto 5) */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.modal-overlay img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* 3. ERRORES DE FORMULARIO (Punto 2 y 7) */
+.error-texto {
+  color: #dc2626;
+  font-size: 12px;
+  display: block;
+  margin-top: 4px;
+}
+
+/* 4. RELOJ EN NAV (Punto 3) */
+#reloj-tiempo-real {
+  color: #ffffff;
+  font-size: 13px;
+  margin-top: 5px;
 }
 
 /* RESPONSIVE */

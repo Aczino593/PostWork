@@ -3,17 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- 1. Etiqueta <title> con Palabra Clave Principal -->
-    <title>Empleos IT en Argentina sin Intermediarios | PostWork</title>
-
-    <!-- 2. Meta description descriptiva y llamativa -->
-    <meta name="description" content="Encuentra las mejores ofertas de empleos IT en Argentina. Conecta directamente con empresas de tecnología para trabajo de desarrollador software y analista de datos.">
-    
+    <title>PostWork - Plataforma de Empleos IT en Argentina</title>
+    <meta name="description" content="Plataforma de empleos IT en Argentina sin intermediarios. Conectamos el talento tecnológico con las mejores ofertas laborales.">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
+    <!-- Navegación Principal -->
     <nav class="main-nav">
         <h2>PostWork</h2>
         <a href="index.html" class="active">Inicio</a>
@@ -21,81 +17,87 @@
         <a href="FAQ.html">FAQ</a>
         <a href="#contacto">Contacto</a>
         <div class="nav-links">
+            <span id="reloj-tiempo-real" aria-live="polite">00:00:00</span>
+            <button type="button" id="btn-modo-oscuro" class="btn-secondary" title="Cambiar tema">Modo Oscuro</button>
             <a href="login.html" class="btn-nav-secondary">Iniciar Sesión</a>
             <a href="registro.html" class="btn-nav-primary">Registrarse</a>
         </div>
     </nav>
 
-    <header class="hero-header">
-        <!-- 3. Encabezado H1 principal con palabra clave -->
-        <h1>Plataforma de Empleos IT en Argentina sin Intermediarios</h1>
-        <p>Conectamos el talento tecnológico con las mejores ofertas para trabajo de desarrollador software y programador remoto.</p>
+    <!-- Banner Azul Principal -->
+    <header style="background-color: #2563eb; color: #ffffff; text-align: center; padding: 50px 20px;">
+        <h1 style="font-size: 2.2rem; font-weight: bold; margin-bottom: 15px;">Plataforma de Empleos IT en Argentina sin Intermediarios</h1>
+        <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto; opacity: 0.95;">
+            Conectamos el talento tecnológico con las mejores ofertas para trabajo de desarrollador software y programador remoto.
+        </p>
     </header>
 
-    <main class="container-wide margin-top-large">
+    <!-- Contenido Principal -->
+    <main style="max-width: 850px; margin: 40px auto; padding: 0 20px;">
         
-        <section class="text-center margin-bottom-large">
-            <!-- Encabezado H2 con palabra clave secundaria -->
-            <h2 class="section-header">Encuentra Trabajo de Desarrollador Software y Analista de Datos</h2>
-            <div class="card-image">
-                <!-- 4. Imagen optimizada con atributo alt descriptivo para SEO -->
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Equipo de tecnología buscando trabajo de desarrollador software en Argentina">
-            </div>
-        </section>
-
-        <section class="card-primary margin-bottom-large">
-            <!-- Encabezado H2 optimizado -->
-            <h2 class="section-header">Destacá tu Perfil para Empleos IT y Trabajo Remoto</h2>
-            <p class="margin-bottom-medium">Prepará tu CV en PDF y postulate a las mejores ofertas de manera directa y sin intermediarios.</p>
-            <div class="card-image">
-                <!-- Imagen con alt optimizado -->
-                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Candidato optimizando perfil profesional para trabajo programador remoto">
-            </div>
-        </section>
-
-        <section class="margin-bottom-large">
-            <div class="text-center margin-bottom-medium">
-                <h2 class="section-header">¿Cómo funciona la búsqueda de empleo en PostWork?</h2>
-                <p class="text-muted">Nuestra plataforma te guía en tres simples pasos para conseguir tu próximo trabajo IT.</p>
-            </div>
+        <!-- Sección Galería de Comunidad -->
+        <section class="text-center" style="margin-bottom: 50px;">
+            <h2 style="font-size: 1.6rem; margin-bottom: 25px;">Encuentra Trabajo de Desarrollador Software y Analista de Datos</h2>
             
-            <div class="flex flex-gap-medium flex-wrap">
-                <article class="card flex-grow">
-                    <h3>1. Crea tu perfil profesional</h3>
-                    <p>Completa tus datos, sube tu curriculum en formato PDF y destaca tus habilidades para trabajo de programador o analista de datos.</p>
-                </article>
-                <article class="card flex-grow">
-                    <h3>2. Explora vacantes IT</h3>
-                    <p>Usa nuestro buscador para encontrar ofertas para Trabajo Desarrollador Junior, Senior y posiciones 100% remotas.</p>
-                </article>
-                <article class="card flex-grow">
-                    <h3>3. Postúlate sin intermediarios</h3>
-                    <p>Envía tu perfil a las empresas tecnológicas con un solo clic y sigue el estado de tu postulación en tiempo real.</p>
-                </article>
+            <div class="card" style="padding: 20px; display: inline-block; width: 100%;">
+                <img id="galeria-img" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800" alt="Comunidad de trabajo IT" style="width: 100%; max-height: 420px; object-fit: cover; border-radius: 8px; cursor: pointer;">
+                
+                <div style="margin-top: 15px; display: flex; justify-content: center; gap: 10px;">
+                    <button id="galeria-prev" class="btn-secondary">Anterior</button>
+                    <button id="galeria-next" class="btn-secondary">Siguiente</button>
+                </div>
             </div>
         </section>
 
-        <section class="card text-center margin-bottom-large">
-            <h3>¿Querés comenzar ahora a postularte?</h3>
-            <p class="text-muted margin-bottom-medium">Registrate gratis para postularte a las ofertas o iniciá sesión si ya tenés una cuenta activa.</p>
-            <div class="btn-group-horizontal">
-                <a href="registro.html" class="btn-primary">Registrarse</a>
-                <a href="login.html" class="btn-secondary">Iniciar Sesión</a>
+        <!-- Sección Explicativa de 3 Pasos -->
+        <section class="text-center" style="margin-bottom: 40px;">
+            <h2 style="font-size: 1.6rem; margin-bottom: 10px;">¿Cómo funciona la búsqueda de empleo en PostWork?</h2>
+            <p class="text-muted" style="margin-bottom: 30px;">Nuestra plataforma te guía en tres simples pasos para conseguir tu próximo trabajo IT.</p>
+
+            <div class="card margin-bottom-medium text-left">
+                <h3 style="font-size: 1.2rem; margin-bottom: 8px;">1. Crea tu perfil profesional</h3>
+                <p class="text-muted">Completa tus datos, sube tu curriculum en formato PDF y destaca tus habilidades para trabajo de programador o analista de datos.</p>
+            </div>
+
+            <div class="card margin-bottom-medium text-left">
+                <h3 style="font-size: 1.2rem; margin-bottom: 8px;">2. Explora vacantes IT</h3>
+                <p class="text-muted">Usa nuestro buscador para encontrar ofertas para Trabajo Desarrollador Junior, Senior y posiciones 100% remotas.</p>
+            </div>
+
+            <div class="card margin-bottom-medium text-left">
+                <h3 style="font-size: 1.2rem; margin-bottom: 8px;">3. Postúlate sin intermediarios</h3>
+                <p class="text-muted">Envía tu perfil a las empresas tecnológicas con un solo clic y sigue el estado de tu postulación en tiempo real.</p>
+            </div>
+        </section>
+
+        <!-- Llamado a la Acción Final -->
+        <section class="card text-center" style="padding: 35px 20px;">
+            <h3 style="font-size: 1.3rem; margin-bottom: 10px;">¿Querés comenzar ahora a postularte?</h3>
+            <p class="text-muted" style="margin-bottom: 20px;">Registrate gratis para postularte a las ofertas o iniciá sesión si ya tenés una cuenta activa.</p>
+            <div style="display: flex; justify-content: center; gap: 12px;">
+                <a href="registro.html" class="btn-nav-primary" style="padding: 10px 20px;">Registrarse</a>
+                <a href="login.html" class="btn-nav-secondary" style="padding: 10px 20px;">Iniciar Sesión</a>
             </div>
         </section>
 
     </main>
 
+    <!-- Modal para ampliar imagen de la galería -->
+    <div id="modal-galeria" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); justify-content: center; align-items: center; z-index: 1000; cursor: pointer;">
+        <img id="modal-img" src="" alt="Vista ampliada" style="max-width: 90%; max-height: 90%; border-radius: 8px;">
+    </div>
+
+    <!-- Pie de página -->
     <footer id="contacto">
         <h2>Contacto y Soporte PostWork</h2>
-        <p>¿Tenés problemas con tu cuenta o querés optimizar tu perfil para empleos IT? Comunicate con nosotros:</p>
+        <p>¿Tenés dudas con el registro de tu perfil o vacante? Comunicate con nuestro equipo:</p>
         <ul>
             <li>Email: <a href="mailto:soporte@postwork.com">soporte@postwork.com</a></li>
             <li>Teléfono: <a href="tel:+543871234567">Llamar al +54 387 1234-5678</a></li>
-            <li>Comunidad: <a href="#">Seguinos en LinkedIn</a></li>
         </ul>
-        <p class="copyright">&copy; 2026 PostWork - Plataforma de Empleos IT en Argentina.</p>
+        <p class="copyright">&copy; 2026 PostWork - Plataforma de Empleo IT en Argentina.</p>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>

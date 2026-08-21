@@ -3,39 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- 1. Etiqueta <title> optimizada con palabras clave -->
     <title>Blog de Empleos IT, Entrevistas Técnicas y Recursos | PostWork</title>
-
-    <!-- 2. Meta description orientada a contenido educativo y laboral -->
     <meta name="description" content="Guías, consejos y artículos para destacar en la industria tech. Aprende a optimizar tu CV en PDF para filtros ATS y cómo preparar tus entrevistas de live coding.">
-    
-    <!-- Vinculación a la hoja de estilos externa -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
+    <!-- Enlace de salto rápido -->
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido del blog</a>
+
     <!-- NAVEGACIÓN PÚBLICA -->
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Navegación principal">
         <h2>PostWork</h2>
         <a href="index.html">Inicio</a>
-        <a href="blog.html" class="active">Blog / Recursos</a>
+        <a href="blog.html" class="active" aria-current="page">Blog / Recursos</a>
         <a href="FAQ.html">FAQ</a>
-        <a href="#contacto">Contacto</a>
+        <a href="contacto.html">Contacto</a>
         
         <div class="nav-links">
+            <span id="reloj-tiempo-real" aria-live="polite">00:00:00</span>
+            <button type="button" id="btn-modo-oscuro" class="btn-secondary" title="Cambiar tema">Modo Oscuro</button>
             <a href="login.html" class="btn-nav-secondary">Iniciar Sesión</a>
             <a href="registro.html" class="btn-nav-primary">Registrarse</a>
         </div>
     </nav>
 
-    <main class="main-content">
+    <main id="contenido-principal" class="main-content">
 
         <!-- SECCIÓN PRINCIPAL DEL BLOG -->
         <section id="blog-seccion" class="card">
             
             <header>
-                <!-- 3. Encabezado H1 SEO -->
                 <h1>Blog de Empleos IT y Recursos: Consejos para tu Futuro Laboral</h1>
                 <p>Artículos, guías y novedades para destacar como desarrollador software en el mercado de la tecnología.</p>
             </header>
@@ -43,71 +41,79 @@
             <hr class="divider">
 
             <!-- ARTÍCULO 1 -->
-            <article class="margin-bottom-large">
+            <article class="margin-bottom-large" aria-label="Artículo: 5 errores comunes al armar tu CV">
                 <h2 class="section-header-article">5 errores comunes al armar tu CV en PDF para empleos IT y cómo evitarlos</h2>
-                <p class="text-muted margin-bottom-medium"><em>Publicado el 15 de Junio de 2026 por el Equipo de Reclutamiento IT</em></p>
+                <p class="text-muted margin-bottom-medium">Publicado el 15 de Junio de 2026 por el Equipo de Reclutamiento IT</p>
                 
                 <div class="text-center margin-bottom-medium">
-                    <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=800&q=80" alt="Candidato revisando su currículum en PDF para postulaciones de trabajo IT" width="100%" height="auto" class="rounded">
+                    <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=800&q=80" 
+                         alt="Imagen: Vista superior de un portapapeles con un documento titulado My Resume"
+                         role="img" 
+                         class="rounded img-galeria">
                 </div>
 
                 <h3 class="section-header-main margin-top-medium">Consejos para superar los filtros automáticos (ATS) en búsquedas laborales</h3>
                 <p>Muchos candidatos suben currículums con diseños muy complejos que las plataformas no pueden leer correctamente. Lo ideal es mantener una estructura limpia, usar tipografías estándar y exportar siempre en formato PDF para asegurar que el reclutador lo vea tal cual lo diseñaste.</p>
                 
                 <!-- Comentarios del Artículo 1 -->
-                <div class="form-container">
+                <aside class="form-container" aria-label="Comentarios sobre errores de CV">
                     <h4 class="section-header-sidebar margin-top-0">Sección de Comentarios</h4>
                     
                     <div class="border-bottom margin-bottom-small padding-bottom-small">
-                        <h5 class="text-dark margin-bottom-small">Carlos Mendoza:</h5>
+                        <strong class="text-dark margin-bottom-small">Carlos Mendoza dice:</strong>
                         <p class="text-gray">¡Buenísimos los tips! Justo estaba por rehacer mi perfil en la plataforma porque no me llamaban de ninguna oferta. Voy a pasar mi CV a un formato más simple.</p>
                     </div>
                     
                     <div>
-                        <h5 class="text-dark margin-bottom-small">Mariana Gómez:</h5>
+                        <strong class="text-dark margin-bottom-small">Mariana Gómez dice:</strong>
                         <p class="text-gray">¿Es verdad que los iconos de barras de porcentaje para las habilidades confunden a los sistemas automáticos? Gracias por la info.</p>
                     </div>
-                </div>
+                </aside>
             </article>
 
             <hr class="section-divider">
 
             <!-- ARTÍCULO 2 -->
-            <article class="margin-bottom-large">
+            <article class="margin-bottom-large" aria-label="Artículo: Preparación para entrevista técnica de Live Coding">
                 <h2 class="section-header-article">Cómo prepararte para una entrevista técnica de Live Coding para programador remoto</h2>
-                <p class="text-muted margin-bottom-medium"><em>Publicado el 10 de Junio de 2026 por el Equipo de Mentorías IT</em></p>
+                <p class="text-muted margin-bottom-medium">Publicado el 10 de Junio de 2026 por el Equipo de Mentorías IT</p>
                 
                 <div class="text-center margin-bottom-medium">
-                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Desarrolladores de software en entrevista técnica de programación en vivo" width="100%" height="auto" class="rounded">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" 
+                         alt="Imagen: Una desarrolladora señalando código en una pantalla" 
+                         role="img" 
+                         class="rounded img-galeria">
                 </div>
 
                 <h3 class="section-header-main margin-top-medium">La importancia de comunicar tu lógica en voz alta durante el proceso de selección</h3>
                 <p>Durante una prueba técnica en vivo, los evaluadores no solo buscan que el código funcione perfectamente; les interesa muchísimo saber cómo pensás. Explicar tu razonamiento mientras escribís las líneas de código demuestra madurez profesional y buenas habilidades blandas.</p>
                 
                 <!-- Comentarios del Artículo 2 -->
-                <div class="form-container">
+                <aside class="form-container" aria-label="Comentarios sobre entrevista técnica">
                     <h4 class="section-header-sidebar margin-top-0">Sección de Comentarios</h4>
                     
                     <div>
-                        <h5 class="text-dark margin-bottom-small">Lucas Peralta:</h5>
+                        <strong class="text-dark margin-bottom-small">Lucas Peralta dice:</strong>
                         <p class="text-gray">Tuve una prueba de estas la semana pasada a través de PostWork y me puse re nervioso. Me sirve un montón este artículo para practicar el simulacro.</p>
                     </div>
-                </div>
+                </aside>
             </article>
 
             <hr class="section-divider">
 
             <!-- Formulario de comentarios -->
-            <section class="form-container">
+            <section class="form-container" aria-label="Formulario para dejar comentario">
                 <h3 class="section-header-main margin-bottom-medium">Dejá tu comentario en el blog de empleos IT</h3>
-                <form action="blog.html" method="POST">
+                <form action="blog.html" method="POST" id="form-comentario" novalidate>
                     <div class="form-group">
                         <label for="nombre-comentario" class="form-label">Nombre:</label>
                         <input type="text" id="nombre-comentario" name="nombre_comentario" class="form-control" placeholder="Tu nombre completo" maxlength="60" required>
+                        <span class="error-texto" id="error-nombre-comentario"></span>
                     </div>
                     <div class="form-group">
                         <label for="comentario" class="form-label">Comentario:</label>
                         <textarea id="comentario" name="comentario" class="form-control" rows="4" maxlength="500" placeholder="Escribí tu opinión acá..." required></textarea>
+                        <span class="error-texto" id="error-comentario"></span>
                     </div>
                     <button type="submit" class="btn-primary">Publicar Comentario</button>
                 </form>
@@ -117,14 +123,20 @@
 
     </main>
 
+    <!-- Modal para galería/zoom de imágenes -->
+    <div id="modal-galeria" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Visualizador de imágenes">
+        <img id="img-modal" src="" alt="Vista ampliada de la imagen seleccionada">
+    </div>
+
     <!-- PIE DE PÁGINA -->
-    <footer id="contacto">
-        <h3>Contacto y Soporte PostWork</h3>
+    <footer id="contacto" aria-label="Pie de página y contacto">
+        <h2>Contacto y Soporte PostWork</h2>
         <p>¿Tenés alguna duda o sugerencia para nuestros artículos sobre trabajo IT? Escribinos:</p>
         <p>Email: <a href="mailto:soporte@postwork.com">soporte@postwork.com</a></p>
         <p>Teléfono: <a href="tel:+543871234567">Llamar al +54 387 1234-5678</a></p>
         <p class="copyright">&copy; 2026 PostWork - Recursos para la Búsqueda Laboral IT en Argentina.</p>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>

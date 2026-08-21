@@ -17,6 +17,11 @@
         <a href="perfil_usuario.html">Mi Perfil</a>
         <a href="FAQ.html">FAQ</a>
         <a href="contacto.html" class="active">Contacto</a>
+
+        <div class="nav-links">
+            <span id="reloj-tiempo-real" aria-live="polite">00:00:00</span>
+            <button type="button" id="btn-modo-oscuro" class="btn-secondary" title="Cambiar tema">Modo Oscuro</button>
+        </div>
     </nav>
 
     <!-- Encabezado de la página de contacto -->
@@ -45,15 +50,17 @@
         <section class="card flex-grow">
             <h2 class="section-header">Envianos un mensaje directo</h2>
             
-            <form action="contacto.html" method="POST">
+            <form action="contacto.html" method="POST" id="form-contacto" novalidate>
                 <div class="form-group">
                     <label for="nombre" class="form-label">Nombre</label>
                     <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre completo" maxlength="80" required>
+                    <span class="error-texto" id="error-nombre"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="email" class="form-label">Email</label>
                     <input type="email" id="email" name="email" class="form-control" placeholder="tu@email.com" maxlength="100" required>
+                    <span class="error-texto" id="error-email"></span>
                 </div>
 
                 <div class="form-group">
@@ -64,11 +71,13 @@
                         <option value="soporte">Soporte técnico</option>
                         <option value="comercial">Comercial / Empresas</option>
                     </select>
+                    <span class="error-texto" id="error-asunto"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="mensaje" class="form-label">Mensaje</label>
                     <textarea id="mensaje" name="mensaje" class="form-control" rows="6" maxlength="500" placeholder="Escribí tu consulta aquí..." required></textarea>
+                    <span class="error-texto" id="error-mensaje"></span>
                 </div>
 
                 <button type="submit" class="btn-primary block">Enviar mensaje</button>
@@ -81,5 +90,6 @@
         <p class="copyright">&copy; 2026 PostWork - Todos los derechos reservados.</p>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>

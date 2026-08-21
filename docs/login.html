@@ -6,7 +6,7 @@
     <title>PostWork - Iniciar Sesión</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
 
     <nav class="main-nav">
         <h2>PostWork</h2>
@@ -14,33 +14,46 @@
         <a href="blog.html">Blog / Recursos</a>
         <a href="FAQ.html">FAQ</a>
         <div class="nav-links">
-            <a href="login.html" class="btn-nav-primary">Iniciar Sesión</a>
+            <span id="reloj-tiempo-real" aria-live="polite">00:00:00</span>
+            <button type="button" id="btn-modo-oscuro" class="btn-secondary" title="Cambiar tema">Modo Oscuro</button>
+            <a href="login.html" class="btn-nav-primary active">Iniciar Sesión</a>
             <a href="registro.html" class="btn-nav-secondary">Registrarse</a>
         </div>
     </nav>
 
-    <main class="container-form">
+    <main class="container-form margin-top-large" style="flex: 1;">
         <div class="card">
             <header class="text-center margin-bottom-medium">
                 <h1 class="section-header">Iniciar Sesión</h1>
                 <p class="text-muted">Ingrese sus credenciales de acceso</p>
             </header>
 
-            <form action="/login.php" method="POST">
+            <form action="perfil_usuario.html" method="POST" id="form-login" novalidate>
                 <div class="form-group">
                     <label for="email" class="form-label">Correo electrónico:</label>
                     <input type="email" id="email" name="email" class="form-control" placeholder="tu_correo@ejemplo.com" autocomplete="email" required>
+                    <span class="error-texto" id="error-email"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="password" class="form-label">Contraseña:</label>
                     <input type="password" id="password" name="password" class="form-control" placeholder="••••••••" autocomplete="current-password" required>
+                    <span class="error-texto" id="error-password"></span>
                 </div>
 
                 <button type="submit" class="btn-primary block" style="width: 100%;">Ingresar</button>
             </form>
+
+            <div class="text-center margin-top-medium border-top padding-top-small" style="font-size: 0.9rem;">
+                <span class="text-muted">¿No tenés una cuenta aún?</span> <a href="registro.html" class="font-bold color-primary">Registrate gratis</a>
+            </div>
         </div>
     </main>
 
+    <footer>
+        <p>&copy; 2026 PostWork - Plataforma de Empleo IT en Argentina.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

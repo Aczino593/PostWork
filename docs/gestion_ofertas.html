@@ -3,13 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- 1. Etiqueta <title> con palabra clave de gestión y empleos IT -->
     <title>Gestionar Ofertas de Empleo IT y Vacantes | PostWork</title>
-
-    <!-- 2. Meta description descriptiva y enfocada en la gestión de candidatos/empleos -->
     <meta name="description" content="Administra y gestiona tus ofertas de trabajo IT en Argentina. Revisa postulantes para vacantes de desarrollador software, analista de datos y contrataciones directas.">
-    
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body style="min-height: 100vh; display: flex; flex-direction: column;">
@@ -19,10 +14,14 @@
         <a href="index.html">Inicio</a>
         <a href="buscar_empleo.html">Buscar Empleo</a>
         <a href="perfil_usuario.html">Mi Perfil</a>
+
+        <div class="nav-links">
+            <span id="reloj-tiempo-real" aria-live="polite">00:00:00</span>
+            <button type="button" id="btn-modo-oscuro" class="btn-secondary" title="Cambiar tema">Modo Oscuro</button>
+        </div>
     </nav>
 
     <header class="hero-header-dark">
-        <!-- 3. Encabezado H1 estructurado con palabras clave -->
         <h1>Gestionar Ofertas de Empleo IT y Vacantes</h1>
         <p class="hero-subtext">Administra los puestos vigentes para trabajo de desarrollador software, revisa borradores o analiza convocatorias finalizadas.</p>
     </header>
@@ -36,7 +35,6 @@
         </div>
 
         <section class="card margin-bottom-large">
-            <!-- 4. Encabezado H2 jerárquico secundario -->
             <h2 class="section-header-corporate">Listado de Ofertas de Trabajo IT Publicadas</h2>
             <div class="table-responsive">
                 <table>
@@ -91,5 +89,6 @@
         <p>&copy; 2026 PostWork - Panel Corporativo de Empleos IT en Argentina.</p>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -3,13 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- 1. Etiqueta <title> con Palabra Clave Principal -->
     <title>Buscar Trabajo IT, Programador Remoto y Analista de Datos | PostWork</title>
-
-    <!-- 2. Meta description descriptiva y llamativa -->
     <meta name="description" content="Explora vacantes actualizadas para trabajo de desarrollador software, analista de datos y programador remoto en Argentina. ¡Postúlate de forma directa en PostWork!">
-    
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -23,12 +18,16 @@
         <a href="perfil_usuario.html">Mi Perfil</a>
         <a href="postulaciones.html">Postulaciones</a>
         <a href="FAQ.html">FAQ</a>
-        <a href="#contacto">Contacto</a>
+        <a href="contacto.html">Contacto</a>
+
+        <div class="nav-links">
+            <span id="reloj-tiempo-real" aria-live="polite">00:00:00</span>
+            <button type="button" id="btn-modo-oscuro" class="btn-secondary" title="Cambiar tema">Modo Oscuro</button>
+        </div>
     </nav>
 
     <!-- CABECERA DE LA SECCIÓN -->
     <header class="hero-header-dark">
-        <!-- 3. Encabezado H1 principal con palabras clave -->
         <h1>Buscar Trabajo IT y Vacantes Tecnológicas en Argentina</h1>
         <p class="hero-subtext">Encuentra el puesto de desarrollador software o analista de datos que mejor se adapte a tu perfil utilizando nuestros filtros.</p>
     </header>
@@ -38,7 +37,6 @@
         
         <!-- Herramientas de búsqueda y filtros -->
         <section class="card margin-bottom-large">
-            <!-- 4. Encabezados jerárquicos secundarios (H2) -->
             <h2 class="section-header-main">Filtros para Buscar Trabajo IT y Ofertas Laborales</h2>
             
             <form action="buscar_empleo.html" method="GET">
@@ -141,5 +139,6 @@
         <p class="copyright">&copy; 2026 PostWork - Plataforma de Empleos IT en Argentina.</p>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>

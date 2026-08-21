@@ -3,13 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- 1. Etiqueta <title> SEO -->
     <title>Registro de Cuenta | Candidatos y Empresas IT | PostWork</title>
-
-    <!-- 2. Meta description de alta conversión y SEO -->
-    <meta name="description" content="Crea tu cuenta gratuita en PostWork. Postúlate a ofertas de trabajo IT o publica vacantes para contratar talentos en desarrollador software y análisis de datos.">
-    
+    <meta name="description" content="Crea tu cuenta gratuita en PostWork. Postúlate a ofertas de trabajo IT o publica vacantes para contratar talentos en desarrollo de software y análisis de datos.">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body style="min-height: 100vh; display: flex; flex-direction: column;">
@@ -21,6 +16,8 @@
         <a href="FAQ.html">FAQ</a>
         <a href="#contacto">Contacto</a>
         <div class="nav-links">
+            <span id="reloj-tiempo-real" aria-live="polite">00:00:00</span>
+            <button type="button" id="btn-modo-oscuro" class="btn-secondary" title="Cambiar tema">Modo Oscuro</button>
             <a href="login.html" class="btn-nav-secondary">Iniciar Sesión</a>
             <a href="registro.html" class="btn-nav-primary active">Registrarse</a>
         </div>
@@ -28,35 +25,38 @@
 
     <main class="container-form margin-top-large" style="flex: 1;">
         <div class="card">
-            
             <header class="text-center margin-bottom-medium">
-                <!-- 3. Encabezado H1 principal optimizado -->
                 <h1 class="section-header">Crea tu Cuenta Gratis en PostWork</h1>
                 <p class="text-muted">Completá los datos para postularte a ofertas de trabajo IT o publicar vacantes laborales.</p>
             </header>
 
-            <form action="perfil_usuario.html" method="POST">
+            <form action="perfil_usuario.html" method="POST" id="form-registro" class="form-con-resumen" novalidate>
                 <div class="form-group">
                     <label for="nombre-registro" class="form-label">Nombre completo o Razón Social:</label>
                     <input type="text" id="nombre-registro" name="nombre_registro" class="form-control" placeholder="Ej. Juan Pérez / Tech Solutions SRL" maxlength="80" autocomplete="name" required>
+                    <span class="error-texto"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="email-registro" class="form-label">Correo electrónico:</label>
                     <input type="email" id="email-registro" name="email_registro" class="form-control" placeholder="tu_correo@ejemplo.com" maxlength="100" autocomplete="email" required>
+                    <span class="error-texto"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="tipo-cuenta" class="form-label">Tipo de cuenta:</label>
                     <select id="tipo-cuenta" name="tipo_cuenta" class="form-control" required>
+                        <option value="">Selecciona una opción...</option>
                         <option value="candidato">Candidato / Talento IT</option>
                         <option value="empresa">Empresa / Reclutador</option>
                     </select>
+                    <span class="error-texto"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="password-registro" class="form-label">Contraseña:</label>
                     <input type="password" id="password-registro" name="password_registro" class="form-control" placeholder="Mínimo 8 caracteres" minlength="8" maxlength="64" autocomplete="new-password" required>
+                    <span class="error-texto"></span>
                 </div>
 
                 <button type="submit" class="btn-primary block" style="width: 100%;">Crear Cuenta Gratis</button>
@@ -65,7 +65,6 @@
             <div class="text-center margin-top-medium border-top padding-top-small" style="font-size: 0.9rem;">
                 <span class="text-muted">¿Ya tenés una cuenta activa?</span> <a href="login.html" class="font-bold color-primary">Iniciá sesión</a>
             </div>
-
         </div>
     </main>
 
@@ -79,5 +78,6 @@
         <p class="copyright">&copy; 2026 PostWork - Plataforma de Empleo IT en Argentina.</p>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>

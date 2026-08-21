@@ -18,7 +18,12 @@
         <a href="postulaciones.html">Postulaciones</a>
         <a href="chat.html" class="active">Mensajes</a>
         <a href="FAQ.html">FAQ</a>
-        <a href="#contacto">Contacto</a>
+        <a href="contacto.html">Contacto</a>
+
+        <div class="nav-links">
+            <span id="reloj-tiempo-real" aria-live="polite">00:00:00</span>
+            <button type="button" id="btn-modo-oscuro" class="btn-secondary" title="Cambiar tema">Modo Oscuro</button>
+        </div>
     </nav>
 
     <!-- Contenedor principal -->
@@ -34,7 +39,6 @@
             </div>
             
             <ul class="chat-list">
-                <!-- Chat 1 (activo) -->
                 <li class="chat-item active">
                     <div class="chat-item-header">
                         <strong class="chat-item-name">TechCorp</strong>
@@ -43,8 +47,6 @@
                     <p class="chat-item-status">(En línea)</p>
                     <small class="chat-item-message">Gracias por tu interés en la posición...</small>
                 </li>
-
-                <!-- Chat 2 -->
                 <li class="chat-item">
                     <div class="chat-item-header">
                         <strong class="chat-item-name">CreativeStudio</strong>
@@ -52,8 +54,6 @@
                     </div>
                     <small class="chat-item-message">¿Cuándo podrías empezar?</small>
                 </li>
-
-                <!-- Chat 3 -->
                 <li class="chat-item">
                     <div class="chat-item-header">
                         <strong class="chat-item-name">BuildCo</strong>
@@ -66,8 +66,6 @@
 
         <!-- Panel derecho: sala de chat -->
         <section class="chat-room">
-            
-            <!-- Cabecera de sala -->
             <header class="chat-room-header">
                 <div class="chat-room-header-title">
                     <div class="img-company-small">TC</div>
@@ -76,10 +74,7 @@
                 <a href="#" class="chat-room-header-link">Ver perfil de empresa</a>
             </header>
 
-            <!-- Historial de mensajes -->
             <div role="log" aria-label="Historial de mensajes" class="chat-messages">
-                
-                <!-- Mensaje empresa 1 -->
                 <div class="chat-message received">
                     <p class="chat-message-meta">TechCorp - 10:15</p>
                     <div class="chat-message-bubble">
@@ -87,7 +82,6 @@
                     </div>
                 </div>
                 
-                <!-- Mensaje empresa 2 -->
                 <div class="chat-message received">
                     <p class="chat-message-meta">TechCorp - 10:16</p>
                     <div class="chat-message-bubble">
@@ -95,7 +89,6 @@
                     </div>
                 </div>
 
-                <!-- Mensaje usuario 1 -->
                 <div class="chat-message sent">
                     <p class="chat-message-meta">Tú - 10:20</p>
                     <div class="chat-message-bubble">
@@ -103,7 +96,6 @@
                     </div>
                 </div>
 
-                <!-- Mensaje usuario 2 -->
                 <div class="chat-message sent">
                     <p class="chat-message-meta">Tú - 10:21</p>
                     <div class="chat-message-bubble">
@@ -113,7 +105,6 @@
                 </div>
             </div>
 
-            <!-- Formulario de envío -->
             <footer class="chat-form">
                 <form action="chat.html" method="POST" class="chat-form-row">
                     <button type="button" title="Adjuntar archivo" class="btn-icon">📎</button>
@@ -125,10 +116,10 @@
         </section>
     </main>
 
-    <!-- Pie de página -->
     <footer>
         <p class="copyright">&copy; 2026 PostWork - Sistema de Mensajería Seguro.</p>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>

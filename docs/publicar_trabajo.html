@@ -15,6 +15,11 @@
         <a href="publicar_trabajo.html" class="active">Publicar Empleo</a>
         <a href="gestion_ofertas.html">Gestión de Ofertas</a>
         <a href="FAQ.html">FAQ</a>
+
+        <div class="nav-links">
+            <span id="reloj-tiempo-real" aria-live="polite">00:00:00</span>
+            <button type="button" id="btn-modo-oscuro" class="btn-secondary" title="Cambiar tema">Modo Oscuro</button>
+        </div>
     </nav>
 
     <header class="hero-header-dark">
@@ -26,7 +31,7 @@
         <div class="card margin-bottom-large">
             <h2 class="section-header-corporate">Especificaciones de la vacante</h2>
             
-            <form action="publicar_trabajo.html" method="POST">
+            <form action="publicar_trabajo.html" method="POST" id="form-publicar-empleo" class="form-con-resumen">
                 <div class="form-group">
                     <label for="titulo" class="form-label">Título del puesto</label>
                     <input type="text" id="titulo" name="titulo" class="form-control" placeholder="Ej: Desarrollador Full Stack" maxlength="100" required>
@@ -116,5 +121,6 @@
         <p>&copy; 2026 PostWork - Sistema de Carga de Vacantes Oficial.</p>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>
